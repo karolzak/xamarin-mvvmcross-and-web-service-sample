@@ -7,15 +7,15 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Rest;
-using XamFormsMvvmAndRESTServices;
-using XamFormsMvvmAndRESTServices.Models;
+using XamMvvmAndWebServices;
+using XamMvvmAndWebServices.Models;
 
-namespace XamFormsMvvmAndRESTServices
+namespace XamMvvmAndWebServices
 {
     public static partial class CoursesExtensions
     {
         /// <param name='operations'>
-        /// Reference to the XamFormsMvvmAndRESTServices.ICourses.
+        /// Reference to the XamMvvmAndWebServices.ICourses.
         /// </param>
         /// <param name='id'>
         /// Required.
@@ -30,7 +30,7 @@ namespace XamFormsMvvmAndRESTServices
         }
         
         /// <param name='operations'>
-        /// Reference to the XamFormsMvvmAndRESTServices.ICourses.
+        /// Reference to the XamMvvmAndWebServices.ICourses.
         /// </param>
         /// <param name='id'>
         /// Required.
@@ -40,12 +40,12 @@ namespace XamFormsMvvmAndRESTServices
         /// </param>
         public static async Task<Course> DeleteCourseAsync(this ICourses operations, int id, CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Microsoft.Rest.HttpOperationResponse<XamFormsMvvmAndRESTServices.Models.Course> result = await operations.DeleteCourseWithOperationResponseAsync(id, cancellationToken).ConfigureAwait(false);
+            Microsoft.Rest.HttpOperationResponse<XamMvvmAndWebServices.Models.Course> result = await operations.DeleteCourseWithOperationResponseAsync(id, cancellationToken).ConfigureAwait(false);
             return result.Body;
         }
         
         /// <param name='operations'>
-        /// Reference to the XamFormsMvvmAndRESTServices.ICourses.
+        /// Reference to the XamMvvmAndWebServices.ICourses.
         /// </param>
         /// <param name='id'>
         /// Required.
@@ -60,7 +60,7 @@ namespace XamFormsMvvmAndRESTServices
         }
         
         /// <param name='operations'>
-        /// Reference to the XamFormsMvvmAndRESTServices.ICourses.
+        /// Reference to the XamMvvmAndWebServices.ICourses.
         /// </param>
         /// <param name='id'>
         /// Required.
@@ -70,12 +70,12 @@ namespace XamFormsMvvmAndRESTServices
         /// </param>
         public static async Task<Course> GetCourseAsync(this ICourses operations, int id, CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Microsoft.Rest.HttpOperationResponse<XamFormsMvvmAndRESTServices.Models.Course> result = await operations.GetCourseWithOperationResponseAsync(id, cancellationToken).ConfigureAwait(false);
+            Microsoft.Rest.HttpOperationResponse<XamMvvmAndWebServices.Models.Course> result = await operations.GetCourseWithOperationResponseAsync(id, cancellationToken).ConfigureAwait(false);
             return result.Body;
         }
         
         /// <param name='operations'>
-        /// Reference to the XamFormsMvvmAndRESTServices.ICourses.
+        /// Reference to the XamMvvmAndWebServices.ICourses.
         /// </param>
         public static IList<Course> GetCourses(this ICourses operations)
         {
@@ -87,19 +87,19 @@ namespace XamFormsMvvmAndRESTServices
         }
         
         /// <param name='operations'>
-        /// Reference to the XamFormsMvvmAndRESTServices.ICourses.
+        /// Reference to the XamMvvmAndWebServices.ICourses.
         /// </param>
         /// <param name='cancellationToken'>
         /// Cancellation token.
         /// </param>
         public static async Task<IList<Course>> GetCoursesAsync(this ICourses operations, CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Microsoft.Rest.HttpOperationResponse<System.Collections.Generic.IList<XamFormsMvvmAndRESTServices.Models.Course>> result = await operations.GetCoursesWithOperationResponseAsync(cancellationToken).ConfigureAwait(false);
+            Microsoft.Rest.HttpOperationResponse<System.Collections.Generic.IList<XamMvvmAndWebServices.Models.Course>> result = await operations.GetCoursesWithOperationResponseAsync(cancellationToken).ConfigureAwait(false);
             return result.Body;
         }
         
         /// <param name='operations'>
-        /// Reference to the XamFormsMvvmAndRESTServices.ICourses.
+        /// Reference to the XamMvvmAndWebServices.ICourses.
         /// </param>
         /// <param name='course'>
         /// Required.
@@ -114,7 +114,7 @@ namespace XamFormsMvvmAndRESTServices
         }
         
         /// <param name='operations'>
-        /// Reference to the XamFormsMvvmAndRESTServices.ICourses.
+        /// Reference to the XamMvvmAndWebServices.ICourses.
         /// </param>
         /// <param name='course'>
         /// Required.
@@ -124,12 +124,12 @@ namespace XamFormsMvvmAndRESTServices
         /// </param>
         public static async Task<Course> PostCourseAsync(this ICourses operations, Course course, CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Microsoft.Rest.HttpOperationResponse<XamFormsMvvmAndRESTServices.Models.Course> result = await operations.PostCourseWithOperationResponseAsync(course, cancellationToken).ConfigureAwait(false);
+            Microsoft.Rest.HttpOperationResponse<XamMvvmAndWebServices.Models.Course> result = await operations.PostCourseWithOperationResponseAsync(course, cancellationToken).ConfigureAwait(false);
             return result.Body;
         }
         
         /// <param name='operations'>
-        /// Reference to the XamFormsMvvmAndRESTServices.ICourses.
+        /// Reference to the XamMvvmAndWebServices.ICourses.
         /// </param>
         /// <param name='id'>
         /// Required.
@@ -147,7 +147,7 @@ namespace XamFormsMvvmAndRESTServices
         }
         
         /// <param name='operations'>
-        /// Reference to the XamFormsMvvmAndRESTServices.ICourses.
+        /// Reference to the XamMvvmAndWebServices.ICourses.
         /// </param>
         /// <param name='id'>
         /// Required.

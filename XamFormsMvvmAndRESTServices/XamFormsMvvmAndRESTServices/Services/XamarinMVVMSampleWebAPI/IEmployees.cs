@@ -7,9 +7,9 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Rest;
-using XamFormsMvvmAndRESTServices.Models;
+using XamMvvmAndWebServices.Models;
 
-namespace XamFormsMvvmAndRESTServices
+namespace XamMvvmAndWebServices
 {
     public partial interface IEmployees
     {

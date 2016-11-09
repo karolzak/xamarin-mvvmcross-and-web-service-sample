@@ -5,9 +5,9 @@ using System;
 using System.Linq;
 using System.Net.Http;
 using Microsoft.Rest;
-using XamFormsMvvmAndRESTServices;
+using XamMvvmAndWebServices;
 
-namespace XamFormsMvvmAndRESTServices
+namespace XamMvvmAndWebServices
 {
     public partial class XamarinMVVMSampleWebAPIService : ServiceClient<XamarinMVVMSampleWebAPIService>, IXamarinMVVMSampleWebAPIService
     {

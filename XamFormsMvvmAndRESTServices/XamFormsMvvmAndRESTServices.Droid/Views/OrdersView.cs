@@ -2,7 +2,7 @@ using Android.App;
 using Android.OS;
 using MvvmCross.Droid.Views;
 
-namespace XamFormsMvvmAndRESTServices.Droid.Views
+namespace XamMvvmAndWebServices.Droid.Views
 {
     [Activity(Label = "View for OrdersViewModel")]
     public class OrdersView : MvxActivity

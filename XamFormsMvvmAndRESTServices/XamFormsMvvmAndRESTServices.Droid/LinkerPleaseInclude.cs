@@ -5,7 +5,7 @@ using Android.Views;
 using Android.Widget;
 using MvvmCross.Binding.BindingContext;
 
-namespace XamFormsMvvmAndRESTServices.Droid
+namespace XamMvvmAndWebServices.Droid
 {
     // This class is never actually executed, but when Xamarin linking is enabled it does how to ensure types and properties
     // are preserved in the deployed app

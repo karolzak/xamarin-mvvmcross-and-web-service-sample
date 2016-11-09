@@ -15,7 +15,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
-namespace XamFormsMvvmAndRESTServices.UWP
+namespace XamMvvmAndWebServices.UWP
 {
     /// <summary>
     /// Provides application-specific behavior to supplement the default Application class.
@@ -58,7 +58,7 @@ namespace XamFormsMvvmAndRESTServices.UWP
 
                 rootFrame.NavigationFailed += OnNavigationFailed;
 
-                Xamarin.Forms.Forms.Init(e);
+                //Xamarin.Forms.Forms.Init(e);
 
                 if (e.PreviousExecutionState == ApplicationExecutionState.Terminated)
                 {

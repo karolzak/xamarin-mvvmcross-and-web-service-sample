@@ -4,20 +4,22 @@
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent">
-    <EditText
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:textSize="40dp"        
-        local:MvxBind="Text Hello" />
+    
     <TextView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:textSize="40dp"
-        local:MvxBind="Text Hello" />
-  <Button
-    android:layout_width="fill_parent"
+        local:MvxBind="Text PageTitle" />
+    <Button
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:textSize="40dp"
-        local:MvxBind="Click NavigateToCustomersCommand"      
-/>
+        android:text="Go to CustomersView"
+        local:MvxBind="Click NavigateToCustomersCommand" />
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textSize="40dp"
+        android:text="Go Back"
+        local:MvxBind="Click GoBackCommand" />
 </LinearLayout>

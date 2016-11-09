@@ -8,7 +8,7 @@ using MvvmCross.Platform;
 using MvvmCross.Core.ViewModels;
 using MvvmCross.iOS.Platform;
 
-namespace XamFormsMvvmAndRESTServices.iOS
+namespace XamMvvmAndWebServices.iOS
 {
     // The UIApplicationDelegate for the application. This class is responsible for launching the 
     // User Interface of the application, as well as listening (and optionally responding) to 

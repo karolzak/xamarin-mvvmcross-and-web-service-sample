@@ -3,15 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XamFormsMvvmAndRESTServices.Droid", "XamFormsMvvmAndRESTServices\XamFormsMvvmAndRESTServices.Droid\XamFormsMvvmAndRESTServices.Droid.csproj", "{F251FCB6-6330-4A1C-86CD-191092F39674}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XamMvvmAndWebServices.Droid", "XamFormsMvvmAndRESTServices\XamFormsMvvmAndRESTServices.Droid\XamMvvmAndWebServices.Droid.csproj", "{F251FCB6-6330-4A1C-86CD-191092F39674}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XamFormsMvvmAndRESTServices.iOS", "XamFormsMvvmAndRESTServices\XamFormsMvvmAndRESTServices.iOS\XamFormsMvvmAndRESTServices.iOS.csproj", "{F8420C08-8FD0-4773-91C5-1783FD68CC94}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XamMvvmAndWebServices.iOS", "XamFormsMvvmAndRESTServices\XamFormsMvvmAndRESTServices.iOS\XamMvvmAndWebServices.iOS.csproj", "{F8420C08-8FD0-4773-91C5-1783FD68CC94}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XamFormsMvvmAndRESTServices.UWP", "XamFormsMvvmAndRESTServices\XamFormsMvvmAndRESTServices.UWP\XamFormsMvvmAndRESTServices.UWP.csproj", "{5C239DFE-F765-4833-87E3-E37AD6F49476}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XamMvvmAndWebServices.UWP", "XamFormsMvvmAndRESTServices\XamFormsMvvmAndRESTServices.UWP\XamMvvmAndWebServices.UWP.csproj", "{5C239DFE-F765-4833-87E3-E37AD6F49476}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XamFormsMvvmAndRESTServices", "XamFormsMvvmAndRESTServices\XamFormsMvvmAndRESTServices\XamFormsMvvmAndRESTServices.csproj", "{6126EEB1-1ED3-4F04-B531-BD91FB281BCA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XamMvvmAndWebServices", "XamFormsMvvmAndRESTServices\XamFormsMvvmAndRESTServices\XamMvvmAndWebServices.csproj", "{6126EEB1-1ED3-4F04-B531-BD91FB281BCA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XamFormsMvvmAndRESTServices.API", "XamFormsMvvmAndRestServices.API\XamFormsMvvmAndRESTServices.API.csproj", "{383BD882-D7ED-46D5-B326-B3EA17083C3A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XamMvvmAndWebServices.API", "XamFormsMvvmAndRestServices.API\XamMvvmAndWebServices.API.csproj", "{383BD882-D7ED-46D5-B326-B3EA17083C3A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

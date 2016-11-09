@@ -7,15 +7,15 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Rest;
-using XamFormsMvvmAndRESTServices;
-using XamFormsMvvmAndRESTServices.Models;
+using XamMvvmAndWebServices;
+using XamMvvmAndWebServices.Models;
 
-namespace XamFormsMvvmAndRESTServices
+namespace XamMvvmAndWebServices
 {
     public static partial class EnrollmentsExtensions
     {
         /// <param name='operations'>
-        /// Reference to the XamFormsMvvmAndRESTServices.IEnrollments.
+        /// Reference to the XamMvvmAndWebServices.IEnrollments.
         /// </param>
         /// <param name='id'>
         /// Required.
@@ -30,7 +30,7 @@ namespace XamFormsMvvmAndRESTServices
         }
         
         /// <param name='operations'>
-        /// Reference to the XamFormsMvvmAndRESTServices.IEnrollments.
+        /// Reference to the XamMvvmAndWebServices.IEnrollments.
         /// </param>
         /// <param name='id'>
         /// Required.
@@ -40,12 +40,12 @@ namespace XamFormsMvvmAndRESTServices
         /// </param>
         public static async Task<Enrollment> DeleteEnrollmentAsync(this IEnrollments operations, int id, CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Microsoft.Rest.HttpOperationResponse<XamFormsMvvmAndRESTServices.Models.Enrollment> result = await operations.DeleteEnrollmentWithOperationResponseAsync(id, cancellationToken).ConfigureAwait(false);
+            Microsoft.Rest.HttpOperationResponse<XamMvvmAndWebServices.Models.Enrollment> result = await operations.DeleteEnrollmentWithOperationResponseAsync(id, cancellationToken).ConfigureAwait(false);
             return result.Body;
         }
         
         /// <param name='operations'>
-        /// Reference to the XamFormsMvvmAndRESTServices.IEnrollments.
+        /// Reference to the XamMvvmAndWebServices.IEnrollments.
         /// </param>
         /// <param name='id'>
         /// Required.
@@ -60,7 +60,7 @@ namespace XamFormsMvvmAndRESTServices
         }
         
         /// <param name='operations'>
-        /// Reference to the XamFormsMvvmAndRESTServices.IEnrollments.
+        /// Reference to the XamMvvmAndWebServices.IEnrollments.
         /// </param>
         /// <param name='id'>
         /// Required.
@@ -70,12 +70,12 @@ namespace XamFormsMvvmAndRESTServices
         /// </param>
         public static async Task<Enrollment> GetEnrollmentAsync(this IEnrollments operations, int id, CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Microsoft.Rest.HttpOperationResponse<XamFormsMvvmAndRESTServices.Models.Enrollment> result = await operations.GetEnrollmentWithOperationResponseAsync(id, cancellationToken).ConfigureAwait(false);
+            Microsoft.Rest.HttpOperationResponse<XamMvvmAndWebServices.Models.Enrollment> result = await operations.GetEnrollmentWithOperationResponseAsync(id, cancellationToken).ConfigureAwait(false);
             return result.Body;
         }
         
         /// <param name='operations'>
-        /// Reference to the XamFormsMvvmAndRESTServices.IEnrollments.
+        /// Reference to the XamMvvmAndWebServices.IEnrollments.
         /// </param>
         public static IList<Enrollment> GetEnrollments(this IEnrollments operations)
         {
@@ -87,19 +87,19 @@ namespace XamFormsMvvmAndRESTServices
         }
         
         /// <param name='operations'>
-        /// Reference to the XamFormsMvvmAndRESTServices.IEnrollments.
+        /// Reference to the XamMvvmAndWebServices.IEnrollments.
         /// </param>
         /// <param name='cancellationToken'>
         /// Cancellation token.
         /// </param>
         public static async Task<IList<Enrollment>> GetEnrollmentsAsync(this IEnrollments operations, CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Microsoft.Rest.HttpOperationResponse<System.Collections.Generic.IList<XamFormsMvvmAndRESTServices.Models.Enrollment>> result = await operations.GetEnrollmentsWithOperationResponseAsync(cancellationToken).ConfigureAwait(false);
+            Microsoft.Rest.HttpOperationResponse<System.Collections.Generic.IList<XamMvvmAndWebServices.Models.Enrollment>> result = await operations.GetEnrollmentsWithOperationResponseAsync(cancellationToken).ConfigureAwait(false);
             return result.Body;
         }
         
         /// <param name='operations'>
-        /// Reference to the XamFormsMvvmAndRESTServices.IEnrollments.
+        /// Reference to the XamMvvmAndWebServices.IEnrollments.
         /// </param>
         /// <param name='enrollment'>
         /// Required.
@@ -114,7 +114,7 @@ namespace XamFormsMvvmAndRESTServices
         }
         
         /// <param name='operations'>
-        /// Reference to the XamFormsMvvmAndRESTServices.IEnrollments.
+        /// Reference to the XamMvvmAndWebServices.IEnrollments.
         /// </param>
         /// <param name='enrollment'>
         /// Required.
@@ -124,12 +124,12 @@ namespace XamFormsMvvmAndRESTServices
         /// </param>
         public static async Task<Enrollment> PostEnrollmentAsync(this IEnrollments operations, Enrollment enrollment, CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Microsoft.Rest.HttpOperationResponse<XamFormsMvvmAndRESTServices.Models.Enrollment> result = await operations.PostEnrollmentWithOperationResponseAsync(enrollment, cancellationToken).ConfigureAwait(false);
+            Microsoft.Rest.HttpOperationResponse<XamMvvmAndWebServices.Models.Enrollment> result = await operations.PostEnrollmentWithOperationResponseAsync(enrollment, cancellationToken).ConfigureAwait(false);
             return result.Body;
         }
         
         /// <param name='operations'>
-        /// Reference to the XamFormsMvvmAndRESTServices.IEnrollments.
+        /// Reference to the XamMvvmAndWebServices.IEnrollments.
         /// </param>
         /// <param name='id'>
         /// Required.
@@ -147,7 +147,7 @@ namespace XamFormsMvvmAndRESTServices
         }
         
         /// <param name='operations'>
-        /// Reference to the XamFormsMvvmAndRESTServices.IEnrollments.
+        /// Reference to the XamMvvmAndWebServices.IEnrollments.
         /// </param>
         /// <param name='id'>
         /// Required.

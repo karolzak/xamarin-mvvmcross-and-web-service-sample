@@ -2,7 +2,7 @@ using System;
 using System.Diagnostics;
 using MvvmCross.Platform.Platform;
 
-namespace XamFormsMvvmAndRESTServices.iOS
+namespace XamMvvmAndWebServices.iOS
 {
     public class DebugTrace : IMvxTrace
     {

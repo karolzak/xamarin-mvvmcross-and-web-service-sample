@@ -2,7 +2,7 @@
 using System.Diagnostics;
 using MvvmCross.Platform.Platform;
 
-namespace XamFormsMvvmAndRESTServices.UWP
+namespace XamMvvmAndWebServices.UWP
 {
     public class DebugTrace : IMvxTrace
     {

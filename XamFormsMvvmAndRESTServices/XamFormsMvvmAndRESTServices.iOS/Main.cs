@@ -5,7 +5,7 @@ using System.Linq;
 using Foundation;
 using UIKit;
 
-namespace XamFormsMvvmAndRESTServices.iOS
+namespace XamMvvmAndWebServices.iOS
 {
     public class Application
     {

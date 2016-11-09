@@ -7,15 +7,15 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Rest;
-using XamFormsMvvmAndRESTServices;
-using XamFormsMvvmAndRESTServices.Models;
+using XamMvvmAndWebServices;
+using XamMvvmAndWebServices.Models;
 
-namespace XamFormsMvvmAndRESTServices
+namespace XamMvvmAndWebServices
 {
     public static partial class CustomersExtensions
     {
         /// <param name='operations'>
-        /// Reference to the XamFormsMvvmAndRESTServices.ICustomers.
+        /// Reference to the XamMvvmAndWebServices.ICustomers.
         /// </param>
         /// <param name='id'>
         /// Required.
@@ -30,7 +30,7 @@ namespace XamFormsMvvmAndRESTServices
         }
         
         /// <param name='operations'>
-        /// Reference to the XamFormsMvvmAndRESTServices.ICustomers.
+        /// Reference to the XamMvvmAndWebServices.ICustomers.
         /// </param>
         /// <param name='id'>
         /// Required.
@@ -40,12 +40,12 @@ namespace XamFormsMvvmAndRESTServices
         /// </param>
         public static async Task<Customer> DeleteCustomerAsync(this ICustomers operations, int id, CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Microsoft.Rest.HttpOperationResponse<XamFormsMvvmAndRESTServices.Models.Customer> result = await operations.DeleteCustomerWithOperationResponseAsync(id, cancellationToken).ConfigureAwait(false);
+            Microsoft.Rest.HttpOperationResponse<XamMvvmAndWebServices.Models.Customer> result = await operations.DeleteCustomerWithOperationResponseAsync(id, cancellationToken).ConfigureAwait(false);
             return result.Body;
         }
         
         /// <param name='operations'>
-        /// Reference to the XamFormsMvvmAndRESTServices.ICustomers.
+        /// Reference to the XamMvvmAndWebServices.ICustomers.
         /// </param>
         /// <param name='id'>
         /// Required.
@@ -60,7 +60,7 @@ namespace XamFormsMvvmAndRESTServices
         }
         
         /// <param name='operations'>
-        /// Reference to the XamFormsMvvmAndRESTServices.ICustomers.
+        /// Reference to the XamMvvmAndWebServices.ICustomers.
         /// </param>
         /// <param name='id'>
         /// Required.
@@ -70,12 +70,12 @@ namespace XamFormsMvvmAndRESTServices
         /// </param>
         public static async Task<Customer> GetCustomerAsync(this ICustomers operations, int id, CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Microsoft.Rest.HttpOperationResponse<XamFormsMvvmAndRESTServices.Models.Customer> result = await operations.GetCustomerWithOperationResponseAsync(id, cancellationToken).ConfigureAwait(false);
+            Microsoft.Rest.HttpOperationResponse<XamMvvmAndWebServices.Models.Customer> result = await operations.GetCustomerWithOperationResponseAsync(id, cancellationToken).ConfigureAwait(false);
             return result.Body;
         }
         
         /// <param name='operations'>
-        /// Reference to the XamFormsMvvmAndRESTServices.ICustomers.
+        /// Reference to the XamMvvmAndWebServices.ICustomers.
         /// </param>
         public static IList<Customer> GetCustomers(this ICustomers operations)
         {
@@ -87,19 +87,19 @@ namespace XamFormsMvvmAndRESTServices
         }
         
         /// <param name='operations'>
-        /// Reference to the XamFormsMvvmAndRESTServices.ICustomers.
+        /// Reference to the XamMvvmAndWebServices.ICustomers.
         /// </param>
         /// <param name='cancellationToken'>
         /// Cancellation token.
         /// </param>
         public static async Task<IList<Customer>> GetCustomersAsync(this ICustomers operations, CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Microsoft.Rest.HttpOperationResponse<System.Collections.Generic.IList<XamFormsMvvmAndRESTServices.Models.Customer>> result = await operations.GetCustomersWithOperationResponseAsync(cancellationToken).ConfigureAwait(false);
+            Microsoft.Rest.HttpOperationResponse<System.Collections.Generic.IList<XamMvvmAndWebServices.Models.Customer>> result = await operations.GetCustomersWithOperationResponseAsync(cancellationToken).ConfigureAwait(false);
             return result.Body;
         }
         
         /// <param name='operations'>
-        /// Reference to the XamFormsMvvmAndRESTServices.ICustomers.
+        /// Reference to the XamMvvmAndWebServices.ICustomers.
         /// </param>
         /// <param name='customer'>
         /// Required.
@@ -114,7 +114,7 @@ namespace XamFormsMvvmAndRESTServices
         }
         
         /// <param name='operations'>
-        /// Reference to the XamFormsMvvmAndRESTServices.ICustomers.
+        /// Reference to the XamMvvmAndWebServices.ICustomers.
         /// </param>
         /// <param name='customer'>
         /// Required.
@@ -124,12 +124,12 @@ namespace XamFormsMvvmAndRESTServices
         /// </param>
         public static async Task<Customer> PostCustomerAsync(this ICustomers operations, Customer customer, CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Microsoft.Rest.HttpOperationResponse<XamFormsMvvmAndRESTServices.Models.Customer> result = await operations.PostCustomerWithOperationResponseAsync(customer, cancellationToken).ConfigureAwait(false);
+            Microsoft.Rest.HttpOperationResponse<XamMvvmAndWebServices.Models.Customer> result = await operations.PostCustomerWithOperationResponseAsync(customer, cancellationToken).ConfigureAwait(false);
             return result.Body;
         }
         
         /// <param name='operations'>
-        /// Reference to the XamFormsMvvmAndRESTServices.ICustomers.
+        /// Reference to the XamMvvmAndWebServices.ICustomers.
         /// </param>
         /// <param name='id'>
         /// Required.
@@ -147,7 +147,7 @@ namespace XamFormsMvvmAndRESTServices
         }
         
         /// <param name='operations'>
-        /// Reference to the XamFormsMvvmAndRESTServices.ICustomers.
+        /// Reference to the XamMvvmAndWebServices.ICustomers.
         /// </param>
         /// <param name='id'>
         /// Required.

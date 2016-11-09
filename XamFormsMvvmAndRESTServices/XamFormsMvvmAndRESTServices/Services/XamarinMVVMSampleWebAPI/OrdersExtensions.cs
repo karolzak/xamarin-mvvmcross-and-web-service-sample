@@ -7,15 +7,15 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Rest;
-using XamFormsMvvmAndRESTServices;
-using XamFormsMvvmAndRESTServices.Models;
+using XamMvvmAndWebServices;
+using XamMvvmAndWebServices.Models;
 
-namespace XamFormsMvvmAndRESTServices
+namespace XamMvvmAndWebServices
 {
     public static partial class OrdersExtensions
     {
         /// <param name='operations'>
-        /// Reference to the XamFormsMvvmAndRESTServices.IOrders.
+        /// Reference to the XamMvvmAndWebServices.IOrders.
         /// </param>
         /// <param name='id'>
         /// Required.
@@ -30,7 +30,7 @@ namespace XamFormsMvvmAndRESTServices
         }
         
         /// <param name='operations'>
-        /// Reference to the XamFormsMvvmAndRESTServices.IOrders.
+        /// Reference to the XamMvvmAndWebServices.IOrders.
         /// </param>
         /// <param name='id'>
         /// Required.
@@ -40,12 +40,12 @@ namespace XamFormsMvvmAndRESTServices
         /// </param>
         public static async Task<Order> DeleteOrderAsync(this IOrders operations, int id, CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Microsoft.Rest.HttpOperationResponse<XamFormsMvvmAndRESTServices.Models.Order> result = await operations.DeleteOrderWithOperationResponseAsync(id, cancellationToken).ConfigureAwait(false);
+            Microsoft.Rest.HttpOperationResponse<XamMvvmAndWebServices.Models.Order> result = await operations.DeleteOrderWithOperationResponseAsync(id, cancellationToken).ConfigureAwait(false);
             return result.Body;
         }
         
         /// <param name='operations'>
-        /// Reference to the XamFormsMvvmAndRESTServices.IOrders.
+        /// Reference to the XamMvvmAndWebServices.IOrders.
         /// </param>
         /// <param name='id'>
         /// Required.
@@ -60,7 +60,7 @@ namespace XamFormsMvvmAndRESTServices
         }
         
         /// <param name='operations'>
-        /// Reference to the XamFormsMvvmAndRESTServices.IOrders.
+        /// Reference to the XamMvvmAndWebServices.IOrders.
         /// </param>
         /// <param name='id'>
         /// Required.
@@ -70,12 +70,12 @@ namespace XamFormsMvvmAndRESTServices
         /// </param>
         public static async Task<Order> GetOrderAsync(this IOrders operations, int id, CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Microsoft.Rest.HttpOperationResponse<XamFormsMvvmAndRESTServices.Models.Order> result = await operations.GetOrderWithOperationResponseAsync(id, cancellationToken).ConfigureAwait(false);
+            Microsoft.Rest.HttpOperationResponse<XamMvvmAndWebServices.Models.Order> result = await operations.GetOrderWithOperationResponseAsync(id, cancellationToken).ConfigureAwait(false);
             return result.Body;
         }
         
         /// <param name='operations'>
-        /// Reference to the XamFormsMvvmAndRESTServices.IOrders.
+        /// Reference to the XamMvvmAndWebServices.IOrders.
         /// </param>
         public static IList<Order> GetOrders(this IOrders operations)
         {
@@ -87,19 +87,19 @@ namespace XamFormsMvvmAndRESTServices
         }
         
         /// <param name='operations'>
-        /// Reference to the XamFormsMvvmAndRESTServices.IOrders.
+        /// Reference to the XamMvvmAndWebServices.IOrders.
         /// </param>
         /// <param name='cancellationToken'>
         /// Cancellation token.
         /// </param>
         public static async Task<IList<Order>> GetOrdersAsync(this IOrders operations, CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Microsoft.Rest.HttpOperationResponse<System.Collections.Generic.IList<XamFormsMvvmAndRESTServices.Models.Order>> result = await operations.GetOrdersWithOperationResponseAsync(cancellationToken).ConfigureAwait(false);
+            Microsoft.Rest.HttpOperationResponse<System.Collections.Generic.IList<XamMvvmAndWebServices.Models.Order>> result = await operations.GetOrdersWithOperationResponseAsync(cancellationToken).ConfigureAwait(false);
             return result.Body;
         }
         
         /// <param name='operations'>
-        /// Reference to the XamFormsMvvmAndRESTServices.IOrders.
+        /// Reference to the XamMvvmAndWebServices.IOrders.
         /// </param>
         /// <param name='order'>
         /// Required.
@@ -114,7 +114,7 @@ namespace XamFormsMvvmAndRESTServices
         }
         
         /// <param name='operations'>
-        /// Reference to the XamFormsMvvmAndRESTServices.IOrders.
+        /// Reference to the XamMvvmAndWebServices.IOrders.
         /// </param>
         /// <param name='order'>
         /// Required.
@@ -124,12 +124,12 @@ namespace XamFormsMvvmAndRESTServices
         /// </param>
         public static async Task<Order> PostOrderAsync(this IOrders operations, Order order, CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Microsoft.Rest.HttpOperationResponse<XamFormsMvvmAndRESTServices.Models.Order> result = await operations.PostOrderWithOperationResponseAsync(order, cancellationToken).ConfigureAwait(false);
+            Microsoft.Rest.HttpOperationResponse<XamMvvmAndWebServices.Models.Order> result = await operations.PostOrderWithOperationResponseAsync(order, cancellationToken).ConfigureAwait(false);
             return result.Body;
         }
         
         /// <param name='operations'>
-        /// Reference to the XamFormsMvvmAndRESTServices.IOrders.
+        /// Reference to the XamMvvmAndWebServices.IOrders.
         /// </param>
         /// <param name='id'>
         /// Required.
@@ -147,7 +147,7 @@ namespace XamFormsMvvmAndRESTServices
         }
         
         /// <param name='operations'>
-        /// Reference to the XamFormsMvvmAndRESTServices.IOrders.
+        /// Reference to the XamMvvmAndWebServices.IOrders.
         /// </param>
         /// <param name='id'>
         /// Required.

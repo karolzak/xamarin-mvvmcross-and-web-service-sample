@@ -9,7 +9,7 @@ using System;
 using System.CodeDom.Compiler;
 using UIKit;
 
-namespace XamFormsMvvmAndRESTServices.iOS.Views
+namespace XamMvvmAndWebServices.iOS.Views
 {
     [Register ("FirstView")]
     partial class FirstView

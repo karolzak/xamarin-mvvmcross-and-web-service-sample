@@ -1,8 +1,8 @@
 ﻿<Application
-    x:Class="XamFormsMvvmAndRESTServices.UWP.App"
+    x:Class="XamMvvmAndWebServices.UWP.App"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:XamFormsMvvmAndRESTServices.UWP"
+    xmlns:local="using:XamMvvmAndWebServices.UWP"
     RequestedTheme="Light">
 
 </Application>

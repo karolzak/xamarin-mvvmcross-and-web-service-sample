@@ -7,15 +7,15 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Rest;
-using XamFormsMvvmAndRESTServices;
-using XamFormsMvvmAndRESTServices.Models;
+using XamMvvmAndWebServices;
+using XamMvvmAndWebServices.Models;
 
-namespace XamFormsMvvmAndRESTServices
+namespace XamMvvmAndWebServices
 {
     public static partial class StudentsExtensions
     {
         /// <param name='operations'>
-        /// Reference to the XamFormsMvvmAndRESTServices.IStudents.
+        /// Reference to the XamMvvmAndWebServices.IStudents.
         /// </param>
         /// <param name='id'>
         /// Required.
@@ -30,7 +30,7 @@ namespace XamFormsMvvmAndRESTServices
         }
         
         /// <param name='operations'>
-        /// Reference to the XamFormsMvvmAndRESTServices.IStudents.
+        /// Reference to the XamMvvmAndWebServices.IStudents.
         /// </param>
         /// <param name='id'>
         /// Required.
@@ -40,12 +40,12 @@ namespace XamFormsMvvmAndRESTServices
         /// </param>
         public static async Task<Student> DeleteStudentAsync(this IStudents operations, int id, CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Microsoft.Rest.HttpOperationResponse<XamFormsMvvmAndRESTServices.Models.Student> result = await operations.DeleteStudentWithOperationResponseAsync(id, cancellationToken).ConfigureAwait(false);
+            Microsoft.Rest.HttpOperationResponse<XamMvvmAndWebServices.Models.Student> result = await operations.DeleteStudentWithOperationResponseAsync(id, cancellationToken).ConfigureAwait(false);
             return result.Body;
         }
         
         /// <param name='operations'>
-        /// Reference to the XamFormsMvvmAndRESTServices.IStudents.
+        /// Reference to the XamMvvmAndWebServices.IStudents.
         /// </param>
         /// <param name='id'>
         /// Required.
@@ -60,7 +60,7 @@ namespace XamFormsMvvmAndRESTServices
         }
         
         /// <param name='operations'>
-        /// Reference to the XamFormsMvvmAndRESTServices.IStudents.
+        /// Reference to the XamMvvmAndWebServices.IStudents.
         /// </param>
         /// <param name='id'>
         /// Required.
@@ -70,12 +70,12 @@ namespace XamFormsMvvmAndRESTServices
         /// </param>
         public static async Task<Student> GetStudentAsync(this IStudents operations, int id, CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Microsoft.Rest.HttpOperationResponse<XamFormsMvvmAndRESTServices.Models.Student> result = await operations.GetStudentWithOperationResponseAsync(id, cancellationToken).ConfigureAwait(false);
+            Microsoft.Rest.HttpOperationResponse<XamMvvmAndWebServices.Models.Student> result = await operations.GetStudentWithOperationResponseAsync(id, cancellationToken).ConfigureAwait(false);
             return result.Body;
         }
         
         /// <param name='operations'>
-        /// Reference to the XamFormsMvvmAndRESTServices.IStudents.
+        /// Reference to the XamMvvmAndWebServices.IStudents.
         /// </param>
         public static IList<Student> GetStudents(this IStudents operations)
         {
@@ -87,19 +87,19 @@ namespace XamFormsMvvmAndRESTServices
         }
         
         /// <param name='operations'>
-        /// Reference to the XamFormsMvvmAndRESTServices.IStudents.
+        /// Reference to the XamMvvmAndWebServices.IStudents.
         /// </param>
         /// <param name='cancellationToken'>
         /// Cancellation token.
         /// </param>
         public static async Task<IList<Student>> GetStudentsAsync(this IStudents operations, CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Microsoft.Rest.HttpOperationResponse<System.Collections.Generic.IList<XamFormsMvvmAndRESTServices.Models.Student>> result = await operations.GetStudentsWithOperationResponseAsync(cancellationToken).ConfigureAwait(false);
+            Microsoft.Rest.HttpOperationResponse<System.Collections.Generic.IList<XamMvvmAndWebServices.Models.Student>> result = await operations.GetStudentsWithOperationResponseAsync(cancellationToken).ConfigureAwait(false);
             return result.Body;
         }
         
         /// <param name='operations'>
-        /// Reference to the XamFormsMvvmAndRESTServices.IStudents.
+        /// Reference to the XamMvvmAndWebServices.IStudents.
         /// </param>
         /// <param name='student'>
         /// Required.
@@ -114,7 +114,7 @@ namespace XamFormsMvvmAndRESTServices
         }
         
         /// <param name='operations'>
-        /// Reference to the XamFormsMvvmAndRESTServices.IStudents.
+        /// Reference to the XamMvvmAndWebServices.IStudents.
         /// </param>
         /// <param name='student'>
         /// Required.
@@ -124,12 +124,12 @@ namespace XamFormsMvvmAndRESTServices
         /// </param>
         public static async Task<Student> PostStudentAsync(this IStudents operations, Student student, CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            Microsoft.Rest.HttpOperationResponse<XamFormsMvvmAndRESTServices.Models.Student> result = await operations.PostStudentWithOperationResponseAsync(student, cancellationToken).ConfigureAwait(false);
+            Microsoft.Rest.HttpOperationResponse<XamMvvmAndWebServices.Models.Student> result = await operations.PostStudentWithOperationResponseAsync(student, cancellationToken).ConfigureAwait(false);
             return result.Body;
         }
         
         /// <param name='operations'>
-        /// Reference to the XamFormsMvvmAndRESTServices.IStudents.
+        /// Reference to the XamMvvmAndWebServices.IStudents.
         /// </param>
         /// <param name='id'>
         /// Required.
@@ -147,7 +147,7 @@ namespace XamFormsMvvmAndRESTServices
         }
         
         /// <param name='operations'>
-        /// Reference to the XamFormsMvvmAndRESTServices.IStudents.
+        /// Reference to the XamMvvmAndWebServices.IStudents.
         /// </param>
         /// <param name='id'>
         /// Required.

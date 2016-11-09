@@ -4,9 +4,9 @@
 using System;
 using System.Linq;
 using Microsoft.Rest;
-using XamFormsMvvmAndRESTServices;
+using XamMvvmAndWebServices;
 
-namespace XamFormsMvvmAndRESTServices
+namespace XamMvvmAndWebServices
 {
     public partial interface IXamarinMVVMSampleWebAPIService : IDisposable
     {

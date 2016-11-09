@@ -1,11 +1,16 @@
 ﻿using MvvmCross.Core.ViewModels;
+using MvvmCross.Platform;
 using MvvmCross.Platform.IoC;
 using MvvmCross.Platform.Platform;
 using MvvmCross.WindowsUWP.Platform;
+using MvvmCross.WindowsUWP.Views;
 using Windows.UI.Xaml.Controls;
-using XamFormsMvvmAndRESTServices;
+using XamMvvmAndWebServices;
+using XamMvvmAndWebServices.Interfaces;
+using XamMvvmAndWebServices.UWP.Helpers;
+using XamMvvmAndWebServices.UWP.Services;
 
-namespace XamFormsMvvmAndRESTServices.UWP
+namespace XamMvvmAndWebServices.UWP
 {
     public class Setup : MvxWindowsSetup
     {
@@ -13,17 +18,28 @@ namespace XamFormsMvvmAndRESTServices.UWP
         {
         }
 
+        protected override IMvxWindowsViewPresenter CreateViewPresenter(IMvxWindowsFrame rootFrame)
+        {
+
+            var presenter = new CustomViewPresenter(rootFrame);
+
+            return presenter;
+        }
+       
+
         protected override void InitializeFirstChance()
         {
+           
+            base.InitializeFirstChance();
+
             //register platform specific implementations
             //example:
             //Mvx.RegisterSingleton<IScreenSize>(new WindowsPhoneScreenSize());
-
-            base.InitializeFirstChance();
+            Mvx.RegisterSingleton<IDialogService>(() => new DialogService());
         }
         protected override IMvxApplication CreateApp()
         {
-            return new XamFormsMvvmAndRESTServices.App();
+            return new XamMvvmAndWebServices.App();
         }
 
         protected override IMvxTrace CreateDebugTrace()

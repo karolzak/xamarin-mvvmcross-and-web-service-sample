@@ -10,9 +10,9 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Rest;
 using Newtonsoft.Json.Linq;
-using XamFormsMvvmAndRESTServices;
+using XamMvvmAndWebServices;
 
-namespace XamFormsMvvmAndRESTServices
+namespace XamMvvmAndWebServices
 {
     internal partial class Setup : IServiceOperations<XamarinMVVMSampleWebAPIService>, ISetup
     {
@@ -31,7 +31,7 @@ namespace XamFormsMvvmAndRESTServices
         
         /// <summary>
         /// Gets a reference to the
-        /// XamFormsMvvmAndRESTServices.XamarinMVVMSampleWebAPI.
+        /// XamMvvmAndWebServices.XamarinMVVMSampleWebAPI.
         /// </summary>
         public XamarinMVVMSampleWebAPIService Client
         {

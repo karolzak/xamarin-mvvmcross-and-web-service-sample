@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 
-namespace XamFormsMvvmAndRESTServices.ViewModels
+namespace XamMvvmAndWebServices.ViewModels
 {
     public class OrdersViewModel : MvxViewModel
     {

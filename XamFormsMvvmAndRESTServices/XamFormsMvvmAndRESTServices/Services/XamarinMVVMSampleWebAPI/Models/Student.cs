@@ -6,9 +6,9 @@ using System.Collections.Generic;
 using System.Linq;
 using Microsoft.Rest;
 using Newtonsoft.Json.Linq;
-using XamFormsMvvmAndRESTServices.Models;
+using XamMvvmAndWebServices.Models;
 
-namespace XamFormsMvvmAndRESTServices.Models
+namespace XamMvvmAndWebServices.Models
 {
     public partial class Student
     {

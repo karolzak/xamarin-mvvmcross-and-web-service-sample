@@ -6,14 +6,14 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Rest;
-using XamFormsMvvmAndRESTServices;
+using XamMvvmAndWebServices;
 
-namespace XamFormsMvvmAndRESTServices
+namespace XamMvvmAndWebServices
 {
     public static partial class SetupExtensions
     {
         /// <param name='operations'>
-        /// Reference to the XamFormsMvvmAndRESTServices.ISetup.
+        /// Reference to the XamMvvmAndWebServices.ISetup.
         /// </param>
         public static string GetSetup(this ISetup operations)
         {
@@ -25,7 +25,7 @@ namespace XamFormsMvvmAndRESTServices
         }
         
         /// <param name='operations'>
-        /// Reference to the XamFormsMvvmAndRESTServices.ISetup.
+        /// Reference to the XamMvvmAndWebServices.ISetup.
         /// </param>
         /// <param name='cancellationToken'>
         /// Cancellation token.

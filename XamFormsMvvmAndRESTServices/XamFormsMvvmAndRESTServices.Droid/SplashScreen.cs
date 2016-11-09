@@ -2,10 +2,10 @@ using Android.App;
 using Android.Content.PM;
 using MvvmCross.Droid.Views;
 
-namespace XamFormsMvvmAndRESTServices.Droid
+namespace XamMvvmAndWebServices.Droid
 {
     [Activity(
-        Label = "XamFormsMvvmAndRESTServices.Droid"
+        Label = "XamMvvmAndWebServices.Droid"
         , MainLauncher = true
         , Icon = "@drawable/icon"
         , Theme = "@style/Theme.Splash"

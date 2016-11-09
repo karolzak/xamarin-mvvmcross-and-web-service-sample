@@ -2,7 +2,7 @@ using System;
 using System.Diagnostics;
 using MvvmCross.Platform.Platform;
 
-namespace XamFormsMvvmAndRESTServices.Droid
+namespace XamMvvmAndWebServices.Droid
 {
     public class DebugTrace : IMvxTrace
     {

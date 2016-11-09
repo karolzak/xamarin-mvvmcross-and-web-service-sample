@@ -5,9 +5,9 @@ using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;
 using System.Windows.Input;
-using XamFormsMvvmAndRESTServices.Models;
+using XamMvvmAndWebServices.Models;
 
-namespace XamFormsMvvmAndRESTServices.ViewModels
+namespace XamMvvmAndWebServices.ViewModels
 {
     public class FirstViewModel 
         : MvxViewModel
@@ -123,6 +123,20 @@ namespace XamFormsMvvmAndRESTServices.ViewModels
             //ShowViewModel<OrdersViewModel>();
         }
 
+        private MvxCommand _goBackCommand;
+        public ICommand GoBackCommand
+        {
+            get
+            {
+                _goBackCommand = _goBackCommand ?? new MvxCommand(() => GoBack());
+                return _goBackCommand;
+            }
+        }
+
+        private void GoBack()
+        {
+            Close(this);
+        }
         #endregion
 
     }

@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 
-namespace XamFormsMvvmAndRESTServices.ViewModels
+namespace XamMvvmAndWebServices.ViewModels
 {
     public class CustomersViewModel: MvxViewModel
     {
@@ -40,6 +40,21 @@ namespace XamFormsMvvmAndRESTServices.ViewModels
         {
             //ShowViewModel<CustomersViewModel>();
             ShowViewModel<OrdersViewModel>();
+        }
+
+        private MvxCommand _goBackCommand;
+        public ICommand GoBackCommand
+        {
+            get
+            {
+                _goBackCommand = _goBackCommand ?? new MvxCommand(() => GoBack());
+                return _goBackCommand;
+            }
+        }
+
+        private void GoBack()
+        {
+            Close(this);
         }
     }
 }

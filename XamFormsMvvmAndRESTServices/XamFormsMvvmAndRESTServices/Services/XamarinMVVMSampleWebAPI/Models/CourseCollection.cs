@@ -5,9 +5,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using Newtonsoft.Json.Linq;
-using XamFormsMvvmAndRESTServices.Models;
+using XamMvvmAndWebServices.Models;
 
-namespace XamFormsMvvmAndRESTServices.Models
+namespace XamMvvmAndWebServices.Models
 {
     public static partial class CourseCollection
     {

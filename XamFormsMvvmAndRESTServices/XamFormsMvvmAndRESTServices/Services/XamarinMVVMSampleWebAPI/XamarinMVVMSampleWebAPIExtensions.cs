@@ -4,7 +4,7 @@
 using System;
 using System.Linq;
 
-namespace XamFormsMvvmAndRESTServices
+namespace XamMvvmAndWebServices
 {
     public static partial class XamarinMVVMSampleWebAPIExtensions
     {

@@ -3,9 +3,9 @@ using MvvmCross.iOS.Platform;
 using MvvmCross.iOS.Views.Presenters;
 using MvvmCross.Platform.Platform;
 using UIKit;
-using XamFormsMvvmAndRESTServices;
+using XamMvvmAndWebServices;
 
-namespace XamFormsMvvmAndRESTServices.iOS
+namespace XamMvvmAndWebServices.iOS
 {
     public class Setup : MvxIosSetup
     {

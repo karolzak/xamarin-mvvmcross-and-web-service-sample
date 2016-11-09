@@ -1,7 +1,7 @@
 using MvvmCross.Binding.BindingContext;
 using MvvmCross.iOS.Views;
 
-namespace XamFormsMvvmAndRESTServices.iOS.Views
+namespace XamMvvmAndWebServices.iOS.Views
 {
     public partial class FirstView : MvxViewController
     {

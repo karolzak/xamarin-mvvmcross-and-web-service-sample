@@ -2,7 +2,7 @@ using Android.App;
 using Android.OS;
 using MvvmCross.Droid.Views;
 
-namespace XamFormsMvvmAndRESTServices.Droid.Views
+namespace XamMvvmAndWebServices.Droid.Views
 {
     [Activity(Label = "View for CustomersViewModel")]
     public class CustomersView : MvxActivity
@@ -13,4 +13,6 @@ namespace XamFormsMvvmAndRESTServices.Droid.Views
             SetContentView(Resource.Layout.CustomersView);
         }
     }
+
+
 }

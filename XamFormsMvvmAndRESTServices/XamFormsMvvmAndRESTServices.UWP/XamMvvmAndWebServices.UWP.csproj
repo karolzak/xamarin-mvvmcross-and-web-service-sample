@@ -7,8 +7,8 @@
     <ProjectGuid>{5C239DFE-F765-4833-87E3-E37AD6F49476}</ProjectGuid>
     <OutputType>AppContainerExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>XamFormsMvvmAndRESTServices.UWP</RootNamespace>
-    <AssemblyName>XamFormsMvvmAndRESTServices.UWP</AssemblyName>
+    <RootNamespace>XamMvvmAndWebServices.UWP</RootNamespace>
+    <AssemblyName>XamMvvmAndWebServices.UWP</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
     <TargetPlatformVersion>10.0.14393.0</TargetPlatformVersion>
@@ -99,13 +99,18 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="DebugTrace.cs" />
+    <Compile Include="Helpers\CustomViewPresenter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\DialogService.cs" />
     <Compile Include="Setup.cs" />
     <Compile Include="Views\CustomersView.xaml.cs">
       <DependentUpon>CustomersView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\FirstView.xaml.cs">
       <DependentUpon>FirstView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LoginView.xaml.cs">
+      <DependentUpon>LoginView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\OrdersView.xaml.cs">
       <DependentUpon>OrdersView.xaml</DependentUpon>
@@ -140,17 +145,22 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\LoginView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\OrdersView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\XamFormsMvvmAndRESTServices\XamFormsMvvmAndRESTServices.csproj">
+    <ProjectReference Include="..\XamFormsMvvmAndRESTServices\XamMvvmAndWebServices.csproj">
       <Project>{6126EEB1-1ED3-4F04-B531-BD91FB281BCA}</Project>
-      <Name>XamFormsMvvmAndRESTServices</Name>
+      <Name>XamMvvmAndWebServices</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>
