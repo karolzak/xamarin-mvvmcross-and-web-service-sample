@@ -11,6 +11,8 @@ using Windows.UI.Xaml.Controls;
 
 namespace XamMvvmAndWebServices.UWP.Helpers
 {
+    //SHOW Mvx - Custom ViewPresenter to clear back stack
+    //used just for ChangePresentation to clear backstack
     public class CustomViewPresenter : MvxWindowsViewPresenter
     {
         IMvxWindowsFrame _rootFrame;

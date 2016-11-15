@@ -15,6 +15,9 @@ using XamMvvmAndWebServices.ViewModels;
 
 namespace XamMvvmAndWebServices.Droid.Helpers
 {
+
+
+    //SHOW Mvx - Custom ViewPresenter to clear back stack
     public class CustomViewPresenter : MvxAndroidViewPresenter
     {
 

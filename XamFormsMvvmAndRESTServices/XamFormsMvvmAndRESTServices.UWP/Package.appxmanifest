@@ -3,7 +3,7 @@
   <Identity Name="f736c883-f105-4d30-a719-4bf328872f5e" Publisher="CN=karolzak" Version="1.0.0.0" />
   <mp:PhoneIdentity PhoneProductId="f736c883-f105-4d30-a719-4bf328872f5e" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
-    <DisplayName>XamFormsMvvmAndRESTServices</DisplayName>
+    <DisplayName>XamMvvmAndWebServices</DisplayName>
     <PublisherDisplayName>Karol Żak</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
@@ -14,8 +14,8 @@
     <Resource Language="x-generate" />
   </Resources>
   <Applications>
-    <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="XamFormsMvvmAndRESTServices.UWP">
-      <uap:VisualElements DisplayName="XamFormsMvvmAndRESTServices.UWP" Square150x150Logo="Assets\Square150x150Logo.png" Square44x44Logo="Assets\Square44x44Logo.png" Description="XamFormsMvvmAndRESTServices.UWP" BackgroundColor="transparent">
+    <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="XamMvvmAndWebServices.UWP">
+      <uap:VisualElements DisplayName="XamMvvmAndWebServices.UWP" Square150x150Logo="Assets\Square150x150Logo.png" Square44x44Logo="Assets\Square44x44Logo.png" Description="XamFormsMvvmAndRESTServices.UWP" BackgroundColor="transparent">
         <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png">
         </uap:DefaultTile>
         <uap:SplashScreen Image="Assets\SplashScreen.png" />

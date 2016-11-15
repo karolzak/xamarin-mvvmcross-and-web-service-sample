@@ -21,13 +21,15 @@ namespace XamFormsMvvmAndRestServices.API.Controllers
         public IQueryable<Customer> GetCustomers()
         {
             return db.Customers.Include(q => q.Employee).Include(q => q.Orders);
+            //return db.Customers;
         }
 
         // GET: api/Customers/5
         [ResponseType(typeof(Customer))]
         public IHttpActionResult GetCustomer(int id)
         {
-            Customer customer = db.Customers.Include(q => q.Employee).Include(q => q.Orders).Single(q=>q.Id==id);
+            Customer customer = db.Customers.Include(q => q.Employee).Include(q => q.Orders).Single(q => q.Id == id);
+            //Customer customer = db.Customers.Single(q=>q.Id==id);
             if (customer == null)
             {
                 return NotFound();
@@ -40,6 +42,7 @@ namespace XamFormsMvvmAndRestServices.API.Controllers
         [ResponseType(typeof(void))]
         public IHttpActionResult PutCustomer(int id, Customer customer)
         {
+            customer.Orders = null;
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
@@ -75,6 +78,7 @@ namespace XamFormsMvvmAndRestServices.API.Controllers
         [ResponseType(typeof(Customer))]
         public IHttpActionResult PostCustomer(Customer customer)
         {
+            customer.Orders = null;
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);

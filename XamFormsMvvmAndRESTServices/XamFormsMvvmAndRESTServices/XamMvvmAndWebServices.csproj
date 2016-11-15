@@ -36,50 +36,37 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="App.cs" />
+    <Compile Include="Converters\DateTimeConverter.cs" />
+    <Compile Include="Helpers\NavigationParameters.cs" />
     <Compile Include="Interfaces\IDialogService.cs" />
     <Compile Include="Interfaces\ILoginService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\LoginService.cs" />
+    <Compile Include="ViewModels\CustomerFormViewModel.cs" />
     <Compile Include="ViewModels\CustomersViewModel.cs" />
+    <Compile Include="ViewModels\EmployeeFormViewModel.cs" />
     <Compile Include="ViewModels\FirstViewModel.cs" />
     <Compile Include="ViewModels\LoginViewModel.cs" />
+    <Compile Include="ViewModels\OrderFormViewModel.cs" />
     <Compile Include="ViewModels\OrdersViewModel.cs" />
-    <Compile Include="Services\XamarinMVVMSampleWebAPI\Courses.cs" />
-    <Compile Include="Services\XamarinMVVMSampleWebAPI\CoursesExtensions.cs" />
-    <Compile Include="Services\XamarinMVVMSampleWebAPI\Customers.cs" />
-    <Compile Include="Services\XamarinMVVMSampleWebAPI\CustomersExtensions.cs" />
-    <Compile Include="Services\XamarinMVVMSampleWebAPI\Employees.cs" />
-    <Compile Include="Services\XamarinMVVMSampleWebAPI\EmployeesExtensions.cs" />
-    <Compile Include="Services\XamarinMVVMSampleWebAPI\Enrollments.cs" />
-    <Compile Include="Services\XamarinMVVMSampleWebAPI\EnrollmentsExtensions.cs" />
-    <Compile Include="Services\XamarinMVVMSampleWebAPI\ICourses.cs" />
-    <Compile Include="Services\XamarinMVVMSampleWebAPI\ICustomers.cs" />
-    <Compile Include="Services\XamarinMVVMSampleWebAPI\IEmployees.cs" />
-    <Compile Include="Services\XamarinMVVMSampleWebAPI\IEnrollments.cs" />
-    <Compile Include="Services\XamarinMVVMSampleWebAPI\IOrders.cs" />
-    <Compile Include="Services\XamarinMVVMSampleWebAPI\ISetup.cs" />
-    <Compile Include="Services\XamarinMVVMSampleWebAPI\IStudents.cs" />
-    <Compile Include="Services\XamarinMVVMSampleWebAPI\IXamarinMVVMSampleWebAPIService.cs" />
-    <Compile Include="Services\XamarinMVVMSampleWebAPI\Models\Course.cs" />
-    <Compile Include="Services\XamarinMVVMSampleWebAPI\Models\CourseCollection.cs" />
-    <Compile Include="Services\XamarinMVVMSampleWebAPI\Models\Customer.cs" />
-    <Compile Include="Services\XamarinMVVMSampleWebAPI\Models\CustomerCollection.cs" />
-    <Compile Include="Services\XamarinMVVMSampleWebAPI\Models\Employee.cs" />
-    <Compile Include="Services\XamarinMVVMSampleWebAPI\Models\EmployeeCollection.cs" />
-    <Compile Include="Services\XamarinMVVMSampleWebAPI\Models\Enrollment.cs" />
-    <Compile Include="Services\XamarinMVVMSampleWebAPI\Models\EnrollmentCollection.cs" />
-    <Compile Include="Services\XamarinMVVMSampleWebAPI\Models\Order.cs" />
-    <Compile Include="Services\XamarinMVVMSampleWebAPI\Models\OrderCollection.cs" />
-    <Compile Include="Services\XamarinMVVMSampleWebAPI\Models\Student.cs" />
-    <Compile Include="Services\XamarinMVVMSampleWebAPI\Models\StudentCollection.cs" />
-    <Compile Include="Services\XamarinMVVMSampleWebAPI\Orders.cs" />
-    <Compile Include="Services\XamarinMVVMSampleWebAPI\OrdersExtensions.cs" />
-    <Compile Include="Services\XamarinMVVMSampleWebAPI\Setup.cs" />
-    <Compile Include="Services\XamarinMVVMSampleWebAPI\SetupExtensions.cs" />
-    <Compile Include="Services\XamarinMVVMSampleWebAPI\Students.cs" />
-    <Compile Include="Services\XamarinMVVMSampleWebAPI\StudentsExtensions.cs" />
-    <Compile Include="Services\XamarinMVVMSampleWebAPI\XamarinMVVMSampleWebAPIService.cs" />
-    <Compile Include="Services\XamarinMVVMSampleWebAPI\XamarinMVVMSampleWebAPIExtensions.cs" />
+    <Compile Include="XamarinMVVMSampleWebAPI\Customers.cs" />
+    <Compile Include="XamarinMVVMSampleWebAPI\CustomersExtensions.cs" />
+    <Compile Include="XamarinMVVMSampleWebAPI\Employees.cs" />
+    <Compile Include="XamarinMVVMSampleWebAPI\EmployeesExtensions.cs" />
+    <Compile Include="XamarinMVVMSampleWebAPI\ICustomers.cs" />
+    <Compile Include="XamarinMVVMSampleWebAPI\IEmployees.cs" />
+    <Compile Include="XamarinMVVMSampleWebAPI\IOrders.cs" />
+    <Compile Include="XamarinMVVMSampleWebAPI\IXamarinMVVMSampleWebAPI.cs" />
+    <Compile Include="XamarinMVVMSampleWebAPI\Models\Customer.cs" />
+    <Compile Include="XamarinMVVMSampleWebAPI\Models\CustomerCollection.cs" />
+    <Compile Include="XamarinMVVMSampleWebAPI\Models\Employee.cs" />
+    <Compile Include="XamarinMVVMSampleWebAPI\Models\EmployeeCollection.cs" />
+    <Compile Include="XamarinMVVMSampleWebAPI\Models\Order.cs" />
+    <Compile Include="XamarinMVVMSampleWebAPI\Models\OrderCollection.cs" />
+    <Compile Include="XamarinMVVMSampleWebAPI\Orders.cs" />
+    <Compile Include="XamarinMVVMSampleWebAPI\OrdersExtensions.cs" />
+    <Compile Include="XamarinMVVMSampleWebAPI\XamarinMVVMSampleWebAPI.cs" />
+    <Compile Include="XamarinMVVMSampleWebAPI\XamarinMVVMSampleWebAPIExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Microsoft.Rest.ClientRuntime, Version=0.9.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -99,19 +86,19 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="MvvmCross.Binding, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\MvvmCross.Binding.4.2.2\lib\portable-net45+win+wpa81+wp80\MvvmCross.Binding.dll</HintPath>
+      <HintPath>..\..\packages\MvvmCross.Binding.4.4.0\lib\portable-net45+win+wpa81+wp80\MvvmCross.Binding.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="MvvmCross.Core, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\MvvmCross.Core.4.2.2\lib\portable-net45+win+wpa81+wp80\MvvmCross.Core.dll</HintPath>
+      <HintPath>..\..\packages\MvvmCross.Core.4.4.0\lib\portable-net45+win+wpa81+wp80\MvvmCross.Core.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="MvvmCross.Localization, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\MvvmCross.Binding.4.2.2\lib\portable-net45+win+wpa81+wp80\MvvmCross.Localization.dll</HintPath>
+      <HintPath>..\..\packages\MvvmCross.Binding.4.4.0\lib\portable-net45+win+wpa81+wp80\MvvmCross.Localization.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="MvvmCross.Platform, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\MvvmCross.Platform.4.2.2\lib\portable-net45+win+wpa81+wp80\MvvmCross.Platform.dll</HintPath>
+      <HintPath>..\..\packages\MvvmCross.Platform.4.4.0\lib\portable-net45+win+wpa81+wp80\MvvmCross.Platform.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
@@ -133,8 +120,6 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Converters\" />
-    <Folder Include="Helpers\" />
     <Folder Include="Views\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />

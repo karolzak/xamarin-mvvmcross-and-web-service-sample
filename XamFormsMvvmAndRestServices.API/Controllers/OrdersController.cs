@@ -21,13 +21,15 @@ namespace XamFormsMvvmAndRestServices.API.Controllers
         public IQueryable<Order> GetOrders()
         {
             return db.Orders.Include(q => q.Customer);
+            //return db.Orders;
         }
 
         // GET: api/Orders/5
         [ResponseType(typeof(Order))]
         public IHttpActionResult GetOrder(int id)
         {
-            Order order = db.Orders.Include(q => q.Customer).Single(q=>q.Id==id);
+            //Order order = db.Orders.Single(q => q.Id == id);
+            Order order = db.Orders.Include(q => q.Customer).Single(q => q.Id == id);
             if (order == null)
             {
                 return NotFound();
@@ -40,6 +42,7 @@ namespace XamFormsMvvmAndRestServices.API.Controllers
         [ResponseType(typeof(void))]
         public IHttpActionResult PutOrder(int id, Order order)
         {
+            
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);

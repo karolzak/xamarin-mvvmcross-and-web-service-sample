@@ -100,17 +100,27 @@
     </Compile>
     <Compile Include="DebugTrace.cs" />
     <Compile Include="Helpers\CustomViewPresenter.cs" />
+    <Compile Include="Helpers\NativeDateTimeConverter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\DialogService.cs" />
     <Compile Include="Setup.cs" />
+    <Compile Include="Views\CustomerFormView.xaml.cs">
+      <DependentUpon>CustomerFormView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\CustomersView.xaml.cs">
       <DependentUpon>CustomersView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\EmployeeFormView.xaml.cs">
+      <DependentUpon>EmployeeFormView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\FirstView.xaml.cs">
       <DependentUpon>FirstView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\LoginView.xaml.cs">
       <DependentUpon>LoginView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\OrderFormView.xaml.cs">
+      <DependentUpon>OrderFormView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\OrdersView.xaml.cs">
       <DependentUpon>OrdersView.xaml</DependentUpon>
@@ -141,6 +151,18 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Views\CustomerFormView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\OrderFormView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\EmployeeFormView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\FirstView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -160,7 +182,6 @@
       <Name>XamMvvmAndWebServices</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>

@@ -12,6 +12,7 @@ using XamMvvmAndWebServices.UWP.Services;
 
 namespace XamMvvmAndWebServices.UWP
 {
+    //SHOW Mvx - Windows setup
     public class Setup : MvxWindowsSetup
     {
         public Setup(Frame rootFrame) : base(rootFrame)
@@ -20,7 +21,7 @@ namespace XamMvvmAndWebServices.UWP
 
         protected override IMvxWindowsViewPresenter CreateViewPresenter(IMvxWindowsFrame rootFrame)
         {
-
+            //custom view presenter to gain better control over navigation
             var presenter = new CustomViewPresenter(rootFrame);
 
             return presenter;
@@ -32,6 +33,7 @@ namespace XamMvvmAndWebServices.UWP
            
             base.InitializeFirstChance();
 
+            //SHOW IDialogService - register custom Windows implementation
             //register platform specific implementations
             //example:
             //Mvx.RegisterSingleton<IScreenSize>(new WindowsPhoneScreenSize());
@@ -39,6 +41,7 @@ namespace XamMvvmAndWebServices.UWP
         }
         protected override IMvxApplication CreateApp()
         {
+            //start the App
             return new XamMvvmAndWebServices.App();
         }
 

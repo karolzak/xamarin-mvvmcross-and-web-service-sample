@@ -14,8 +14,7 @@ using Android.Content.PM;
 
 namespace XamMvvmAndWebServices.Droid.Views
 {
-    [Activity(Label = "LoginView",
-        LaunchMode = LaunchMode.SingleTop, NoHistory =true)]
+    [Activity(Label = "LoginView", NoHistory =true)]
     public class LoginView : MvxActivity
     {
         protected override void OnCreate(Bundle savedInstanceState)

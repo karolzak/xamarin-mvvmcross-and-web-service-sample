@@ -3,23 +3,32 @@
     xmlns:local="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent">
+    android:layout_height="fill_parent"
+    android:id="@+id/main_content">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/main_content">
+        <Button
+            android:layout_width="180.0dp"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:text="add"
+            local:MvxBind="Click AddCommand"
+            android:layout_marginRight="0.0dp" />
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:text="edit"
+            local:MvxBind="Click EditCommand" />
+    </LinearLayout>
+    <Mvx.MvxListView
+      local:MvxBind="ItemsSource Employees; SelectedItem SelectedEmployee; ItemClick NavigateToCustomersCommand"
     
-    <TextView
+        android:id="@+id/listview"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:textSize="40dp"
-        local:MvxBind="Text PageTitle" />
-    <Button
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:textSize="40dp"
-        android:text="Go to CustomersView"
-        local:MvxBind="Click NavigateToCustomersCommand" />
-    <Button
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:textSize="40dp"
-        android:text="Go Back"
-        local:MvxBind="Click GoBackCommand" />
+        android:layout_height="fill_parent"
+        local:MvxItemTemplate="@layout/listitem_employee" />
 </LinearLayout>

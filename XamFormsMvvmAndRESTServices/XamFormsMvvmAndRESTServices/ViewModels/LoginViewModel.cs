@@ -70,8 +70,8 @@ namespace XamMvvmAndWebServices.ViewModels
         {
             if (_loginService.Login(Username, Password))
             {
-                _dialogService.Alert("Logged in successfully!", "Logged in!", "OK");
-
+                //_dialogService.Alert("Logged in successfully!", "Logged in!", "OK");
+                
                 var presentationBundle = new MvxBundle(new Dictionary<string, string> { { "NavigationMode", "ClearStack" } });
 
                 ShowViewModel<FirstViewModel>(presentationBundle: presentationBundle);

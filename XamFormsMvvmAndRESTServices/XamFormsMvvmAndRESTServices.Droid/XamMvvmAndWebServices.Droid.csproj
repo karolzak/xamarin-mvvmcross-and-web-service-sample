@@ -72,35 +72,35 @@
     <Reference Include="Mono.Android.Export" />
     <Reference Include="mscorlib" />
     <Reference Include="MvvmCross.Binding, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\MvvmCross.Binding.4.2.2\lib\MonoAndroid\MvvmCross.Binding.dll</HintPath>
+      <HintPath>..\..\packages\MvvmCross.Binding.4.4.0\lib\MonoAndroid\MvvmCross.Binding.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="MvvmCross.Binding.Droid, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\MvvmCross.Binding.4.2.2\lib\MonoAndroid\MvvmCross.Binding.Droid.dll</HintPath>
+      <HintPath>..\..\packages\MvvmCross.Binding.4.4.0\lib\MonoAndroid\MvvmCross.Binding.Droid.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="MvvmCross.Core, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\MvvmCross.Core.4.2.2\lib\MonoAndroid\MvvmCross.Core.dll</HintPath>
+      <HintPath>..\..\packages\MvvmCross.Core.4.4.0\lib\MonoAndroid\MvvmCross.Core.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="MvvmCross.Droid, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\MvvmCross.Core.4.2.2\lib\MonoAndroid\MvvmCross.Droid.dll</HintPath>
+      <HintPath>..\..\packages\MvvmCross.Core.4.4.0\lib\MonoAndroid\MvvmCross.Droid.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="MvvmCross.Droid.Shared, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\MvvmCross.Core.4.2.2\lib\MonoAndroid\MvvmCross.Droid.Shared.dll</HintPath>
+      <HintPath>..\..\packages\MvvmCross.Core.4.4.0\lib\MonoAndroid\MvvmCross.Droid.Shared.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="MvvmCross.Localization, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\MvvmCross.Binding.4.2.2\lib\MonoAndroid\MvvmCross.Localization.dll</HintPath>
+      <HintPath>..\..\packages\MvvmCross.Binding.4.4.0\lib\MonoAndroid\MvvmCross.Localization.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="MvvmCross.Platform, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\MvvmCross.Platform.4.2.2\lib\MonoAndroid\MvvmCross.Platform.dll</HintPath>
+      <HintPath>..\..\packages\MvvmCross.Platform.4.4.0\lib\MonoAndroid\MvvmCross.Platform.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="MvvmCross.Platform.Droid, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\MvvmCross.Platform.4.2.2\lib\MonoAndroid\MvvmCross.Platform.Droid.dll</HintPath>
+      <HintPath>..\..\packages\MvvmCross.Platform.4.4.0\lib\MonoAndroid\MvvmCross.Platform.Droid.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
@@ -152,6 +152,9 @@
     <Compile Include="Setup.cs" />
     <Compile Include="SplashScreen.cs" />
     <Compile Include="Views\CustomersView.cs" />
+    <Compile Include="Views\EmployeeFormView.cs" />
+    <Compile Include="Views\CustomerFormView.cs" />
+    <Compile Include="Views\OrderFormView.cs" />
     <Compile Include="Views\LoginView.cs" />
     <Compile Include="Views\OrdersView.cs" />
     <Compile Include="Views\FirstView.cs" />
@@ -174,6 +177,18 @@
     <AndroidResource Include="Resources\layout\LoginView.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
+    <AndroidResource Include="Resources\layout\EmployeeFormView.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\OrderFormView.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\CustomerFormView.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\ListItem_Employee.axml" />
+    <AndroidResource Include="Resources\layout\ListItem_Customer.axml" />
+    <AndroidResource Include="Resources\layout\ListItem_Order.axml" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\icon.png" />
@@ -210,6 +225,66 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\values-v21\styles.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-hdpi\ic_action_content_create.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-hdpi\ic_action_content_redo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-hdpi\ic_action_content_save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-hdpi\ic_action_content_undo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-hdpi\ic_action_social_share.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_action_content_create.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_action_content_redo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_action_content_save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_action_content_undo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_action_social_share.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_action_content_create.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_action_content_redo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_action_content_save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_action_content_undo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_action_social_share.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-mdpi\ic_action_social_share.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-mdpi\ic_action_content_create.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-mdpi\ic_action_content_redo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-mdpi\ic_action_content_save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-mdpi\ic_action_content_undo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

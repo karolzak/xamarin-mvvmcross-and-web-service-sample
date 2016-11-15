@@ -15,6 +15,7 @@ using MvvmCross.Platform.Droid.Platform;
 
 namespace XamMvvmAndWebServices.Droid.Services
 {
+    //SHOW: IDialogService - Android implementation
     public class DialogService : IDialogService
     {
         /// <summary>Alerts the user with a simple OK dialog and provides a <paramref name="message"/>.</summary>

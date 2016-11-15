@@ -20,7 +20,8 @@ namespace XamFormsMvvmAndRestServices.API.Controllers
         // GET: api/Employees
         public IQueryable<Employee> GetEmployees()
         {
-            var result =db.Employees.Include(q=>q.Customers);
+            var result = db.Employees.Include(q => q.Customers);
+            //var result = db.Employees;
             return result;
         }
 
@@ -28,7 +29,8 @@ namespace XamFormsMvvmAndRestServices.API.Controllers
         [ResponseType(typeof(Employee))]
         public IHttpActionResult GetEmployee(int id)
         {
-            Employee employee = db.Employees.Include(q => q.Customers).Single(q=>q.Id==id);
+            Employee employee = db.Employees.Include(q => q.Customers).Single(q => q.Id == id);
+            //Employee employee = db.Employees.Single(q=>q.Id==id);
             if (employee == null)
             {
                 return NotFound();
@@ -41,6 +43,7 @@ namespace XamFormsMvvmAndRestServices.API.Controllers
         [ResponseType(typeof(void))]
         public IHttpActionResult PutEmployee(int id, Employee employee)
         {
+            employee.Customers = null;
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
@@ -76,6 +79,7 @@ namespace XamFormsMvvmAndRestServices.API.Controllers
         [ResponseType(typeof(Employee))]
         public IHttpActionResult PostEmployee(Employee employee)
         {
+            employee.Customers = null;
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);

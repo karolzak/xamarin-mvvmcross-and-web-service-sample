@@ -24,9 +24,9 @@ namespace XamFormsMvvmAndRestServices.API.Data
         //public DbSet<Student> Students { get; set; }
         //public DbSet<Enrollment> Enrollments { get; set; }
         //public DbSet<Course> Courses { get; set; }
-        public virtual DbSet<Employee> Employees { get; set; }
-        public virtual DbSet<Customer> Customers { get; set; }
-        public virtual DbSet<Order> Orders { get; set; }
+        public  DbSet<Employee> Employees { get; set; }
+        public  DbSet<Customer> Customers { get; set; }
+        public  DbSet<Order> Orders { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

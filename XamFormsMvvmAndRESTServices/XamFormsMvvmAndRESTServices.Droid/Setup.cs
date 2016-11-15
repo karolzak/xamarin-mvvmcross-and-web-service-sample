@@ -9,6 +9,7 @@ using XamMvvmAndWebServices.Droid.Services;
 
 namespace XamMvvmAndWebServices.Droid
 {
+    //SHOW Mvx - Android setup
     public class Setup : MvxAndroidSetup
     {
         public Setup(Context applicationContext) : base(applicationContext)
@@ -34,6 +35,7 @@ namespace XamMvvmAndWebServices.Droid
         {
             base.InitializeFirstChance();
 
+            //SHOW IDialogService - register Adroid implementation
             Mvx.RegisterSingleton<IDialogService>(() => new DialogService());
         }
     }

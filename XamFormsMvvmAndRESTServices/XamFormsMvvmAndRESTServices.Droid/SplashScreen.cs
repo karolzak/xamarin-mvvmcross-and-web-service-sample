@@ -4,6 +4,8 @@ using MvvmCross.Droid.Views;
 
 namespace XamMvvmAndWebServices.Droid
 {
+
+    //SHOW Mvx - Android main launcher
     [Activity(
         Label = "XamMvvmAndWebServices.Droid"
         , MainLauncher = true
