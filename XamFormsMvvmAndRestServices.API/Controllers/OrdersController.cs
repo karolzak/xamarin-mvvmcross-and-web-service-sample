@@ -42,7 +42,8 @@ namespace XamFormsMvvmAndRestServices.API.Controllers
         [ResponseType(typeof(void))]
         public IHttpActionResult PutOrder(int id, Order order)
         {
-            
+
+            order.Customer = null;
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);

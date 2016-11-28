@@ -60,10 +60,10 @@ namespace XamMvvmAndWebServices.Models
         /// <summary>
         /// Optional.
         /// </summary>
-        public string Quantity
+        public int? Quantity
         {
-            get { return this._quantity.ToString(); }
-            set { SetProperty(ref _quantity, Convert.ToInt32(value)); }
+            get { return this._quantity; }
+            set { SetProperty(ref _quantity, value); }
         }
         
         /// <summary>
@@ -105,7 +105,7 @@ namespace XamMvvmAndWebServices.Models
                 JToken quantityValue = inputObject["Quantity"];
                 if (quantityValue != null && quantityValue.Type != JTokenType.Null)
                 {
-                    this.Quantity = ((string)quantityValue);
+                    this.Quantity = (int)quantityValue;
                 }
             }
         }

@@ -16,7 +16,7 @@
             <Setter Property="VerticalAlignment" Value="Center"/>
         </Style>
         <helpers:NativeDateTimeConverter x:Key="DateTimeConverter" />
-
+        <helpers:NativeIntToStringConverter x:Key="IntToStringConverter" />
 
         <DataTemplate x:Key="CustomerDataTemplate">
 

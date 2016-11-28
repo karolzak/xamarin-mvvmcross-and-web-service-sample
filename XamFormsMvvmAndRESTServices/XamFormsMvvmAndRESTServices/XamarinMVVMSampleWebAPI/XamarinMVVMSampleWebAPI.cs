@@ -81,6 +81,7 @@ namespace XamMvvmAndWebServices
             this._employees = new Employees(this);
             this._orders = new Orders(this);
             this._baseUri = new Uri("https://xamarinmvvmsamplewebapi.azurewebsites.net");
+            //this._baseUri = new Uri("http://localhost:50676/");
         }
         
         /// <summary>
@@ -100,6 +101,7 @@ namespace XamMvvmAndWebServices
             this._employees = new Employees(this);
             this._orders = new Orders(this);
             this._baseUri = new Uri("https://xamarinmvvmsamplewebapi.azurewebsites.net");
+            //this._baseUri = new Uri("http://localhost:50676/");
         }
         
         /// <summary>

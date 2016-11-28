@@ -1,6 +1,7 @@
 ﻿using MvvmCross.Core.ViewModels;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -34,17 +35,26 @@ namespace XamMvvmAndWebServices.ViewModels
             set { SetProperty(ref _selectedCustomer, value); }
         }
 
+        public ObservableCollection<Customer> Customers { get; private set; }
         private IXamarinMVVMSampleWebAPI _apiService;
 
         public CustomersViewModel(IXamarinMVVMSampleWebAPI apiService)
         {
             _apiService = apiService;
+            
         }
 
         //used to pass in navigation parameters
         public void Init(NavigationParameters param)
         {
             Employee = _apiService.Employees.GetEmployee(param.EmployeeId);
+            Customers = new ObservableCollection<Customer>();
+
+            var customers = _apiService.Customers.GetCustomers().Where(q=>q.EmployeeId==Employee.Id);
+            foreach (var cust in customers)
+            {
+                Customers.Add(cust);
+            }
         }
 
         #region Commands

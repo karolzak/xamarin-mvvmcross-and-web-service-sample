@@ -10,25 +10,32 @@ using System.Diagnostics;
 namespace XamFormsMvvmAndRESTServices.Converters
 {
     //SHOW: Converters 1 Mvx Value Converters
-    public class DateTimeConverter : IMvxValueConverter
+    public class IntToStringConverter
+        : IMvxValueConverter
     {
 
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
             try
             {
-                var result = ((DateTimeOffset)value).ToString("dd/MM/yyyy");
-                return result;
+                return value.ToString();
             }
-            catch
-            {
-                return DateTime.Now.ToString("dd/MM/yyyy");
-            }
+            catch { return "0"; }
+      
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            throw new NotImplementedException();
+            try
+            {
+                return System.Convert.ToInt32(value);
+
+            }
+            catch
+            {
+                return 0;
+
+            }
         }
     }
 }

@@ -43,6 +43,7 @@ namespace XamFormsMvvmAndRestServices.API.Controllers
         public IHttpActionResult PutCustomer(int id, Customer customer)
         {
             customer.Orders = null;
+            customer.Employee = null;
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);

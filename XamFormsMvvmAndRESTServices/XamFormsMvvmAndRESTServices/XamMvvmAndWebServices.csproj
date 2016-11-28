@@ -36,6 +36,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="App.cs" />
+    <Compile Include="Converters\IntToStringConverter.cs" />
     <Compile Include="Converters\DateTimeConverter.cs" />
     <Compile Include="Helpers\NavigationParameters.cs" />
     <Compile Include="Interfaces\IDialogService.cs" />
