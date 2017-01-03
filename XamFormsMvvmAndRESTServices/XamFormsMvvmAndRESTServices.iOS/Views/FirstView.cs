@@ -1,5 +1,7 @@
+using System;
 using MvvmCross.Binding.BindingContext;
 using MvvmCross.iOS.Views;
+using UIKit;
 
 namespace XamMvvmAndWebServices.iOS.Views
 {
@@ -7,6 +9,11 @@ namespace XamMvvmAndWebServices.iOS.Views
     {
         public FirstView() : base("FirstView", null)
         {
+        }
+
+        partial void TestClickHandler(UIButton sender)
+        {
+            var x =NavigationController.ViewControllers;
         }
 
         public override void ViewDidLoad()

@@ -33,6 +33,25 @@ namespace XamMvvmAndWebServices.Droid.Services
             adb.SetIcon(Resource.Drawable.icon);
             adb.SetPositiveButton(okbtnText, (sender, args) => { /* some logic */ });
             adb.Create().Show();
+
+            //AlertDialog.Builder alert = new AlertDialog.Builder(this);
+
+            //alert.SetTitle("Hi, how are you");
+
+            //alert.SetPositiveButton("Good", (senderAlert, args) => {
+            //    //change value write your own set of instructions
+            //    //you can also create an event for the same in xamarin
+            //    //instead of writing things here
+            //});
+
+            //alert.SetNegativeButton("Not doing great", (senderAlert, args) => {
+            //    //perform your own task for this conditional button click
+            //});
+            ////run the alert in UI thread to display in the screen
+            //RunOnUiThread(() => {
+            //    alert.Show();
+            //});
         }
+
     }
 }

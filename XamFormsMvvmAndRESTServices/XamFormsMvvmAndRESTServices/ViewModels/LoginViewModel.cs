@@ -15,8 +15,8 @@ namespace XamMvvmAndWebServices.ViewModels
             _loginService = loginService;
             _dialogService = dialogService;
 
-            Username = "TestUser";
-            Password = "YouCantSeeMe";
+            Username = "admin";
+            Password = "admin";
             IsLoading = false;
         }
 

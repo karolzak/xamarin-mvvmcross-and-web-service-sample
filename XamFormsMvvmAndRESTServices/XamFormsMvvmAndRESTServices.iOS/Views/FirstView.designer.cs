@@ -1,4 +1,4 @@
-// WARNING
+﻿// WARNING
 //
 // This file has been generated automatically by Xamarin Studio from the outlets and
 // actions declared in your storyboard file.
@@ -16,11 +16,19 @@ namespace XamMvvmAndWebServices.iOS.Views
     {
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UILabel Label { get; set; }
+        UIKit.UILabel Label { get; set; }
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UITextField TextField { get; set; }
+        UIKit.UIButton testButton { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UITextField TextField { get; set; }
+
+        [Action ("TestClickHandler:")]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        partial void TestClickHandler (UIKit.UIButton sender);
 
         void ReleaseDesignerOutlets ()
         {
@@ -28,6 +36,12 @@ namespace XamMvvmAndWebServices.iOS.Views
                 Label.Dispose ();
                 Label = null;
             }
+
+            if (testButton != null) {
+                testButton.Dispose ();
+                testButton = null;
+            }
+
             if (TextField != null) {
                 TextField.Dispose ();
                 TextField = null;
