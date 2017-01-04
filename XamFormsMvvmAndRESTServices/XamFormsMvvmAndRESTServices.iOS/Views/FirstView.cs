@@ -12,10 +12,7 @@ namespace XamMvvmAndWebServices.iOS.Views
         {
         }
 
-        partial void TestClickHandler(UIButton sender)
-        {
-            var x =NavigationController.ViewControllers;
-        }
+        
 
         public override void ViewDidLoad()
         {

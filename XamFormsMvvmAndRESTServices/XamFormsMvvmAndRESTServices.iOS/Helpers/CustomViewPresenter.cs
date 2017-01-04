@@ -44,15 +44,9 @@ namespace XamMvvmAndWebServices.iOS.Helpers
                 if (this.MasterNavigationController != null)
                 {
                     var controllers = this.MasterNavigationController.ViewControllers;
-                    var newcontrollers = new UIViewController[controllers.Length - 1];
-                    int index = 0;
-                    foreach (var item in controllers)
-                    {
-                        newcontrollers[index] = item;
-                        index++;
-                        if (index == controllers.Length - 1)
-                            break;
-                    }
+                    var newcontrollers = new UIViewController[1];
+                    newcontrollers[0] = controllers[controllers.Length - 1];
+                    
                     this.MasterNavigationController.ViewControllers = newcontrollers;
                 }
             }

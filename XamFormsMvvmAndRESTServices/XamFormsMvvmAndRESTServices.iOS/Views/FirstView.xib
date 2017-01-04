@@ -9,7 +9,6 @@
                 <outlet property="view" destination="2" id="RRd-Eg-VrN"/>
                 <outlet property="Label" destination="5" id="name-outlet-5"/>
                 <outlet property="TextField" destination="10" id="name-outlet-10"/>
-                <outlet property="testButton" destination="23" id="name-outlet-23"/>
                 <outlet property="TableViewEmployees" destination="28" id="name-outlet-28"/>
             </connections>
         </placeholder>
@@ -30,15 +29,6 @@
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="23" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" buttonType="roundedRect">
-                    <rect key="frame" x="28" y="163" width="46" height="30"/>
-                    <state key="normal" title="Button">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <connections>
-                        <action selector="TestClickHandler:" destination="-1" id="25" eventType="touchUpInside"/>
-                    </connections>
-                </button>
                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="24" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" onImage="Icon-Small-40.png" offImage="Icon-60.png" selected="YES" enabled="NO">
                     <rect key="frame" x="20" y="244" width="51" height="31"/>
                 </switch>
