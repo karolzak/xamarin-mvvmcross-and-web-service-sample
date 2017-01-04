@@ -32,25 +32,25 @@ namespace XamMvvmAndWebServices.iOS.Views
 
         }
 
-        public override void ViewDidDisappear(bool animated)
-        {
-            if (this.NavigationController != null)
-            {
-                var controllers = this.NavigationController.ViewControllers;
-                var newcontrollers = new UIViewController[controllers.Length - 1];
-                int index = 0;
-                foreach (var item in controllers)
-                {
-                    if (item != this)
-                    {
-                        newcontrollers[index] = item;
-                        index++;
-                    }
+        //public override void ViewDidDisappear(bool animated)
+        //{
+        //    if (this.NavigationController != null)
+        //    {
+        //        var controllers = this.NavigationController.ViewControllers;
+        //        var newcontrollers = new UIViewController[controllers.Length - 1];
+        //        int index = 0;
+        //        foreach (var item in controllers)
+        //        {
+        //            if (item != this)
+        //            {
+        //                newcontrollers[index] = item;
+        //                index++;
+        //            }
 
-                }
-                this.NavigationController.ViewControllers = newcontrollers;
-            }
-            base.ViewDidDisappear(animated);
-        }
+        //        }
+        //        this.NavigationController.ViewControllers = newcontrollers;
+        //    }
+        //    base.ViewDidDisappear(animated);
+        //}
     }
 }

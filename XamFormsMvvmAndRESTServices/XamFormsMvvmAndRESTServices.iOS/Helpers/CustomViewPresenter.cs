@@ -22,13 +22,17 @@ namespace XamMvvmAndWebServices.iOS.Helpers
 
         public override void Show(MvxViewModelRequest request)
         {
-            //if (request.PresentationValues?["NavigationMode"] == "ClearStack")
-            //{
-
-            //    MasterNavigationController.PopViewController(false);
-            //    return;
-            //}
-
+            if (request.PresentationValues?["NavigationMode"] == "ClearStack")
+            {
+                //This approach leaves a black blank screen before loading another page
+                //if (this.MasterNavigationController != null)
+                //{
+                //    var controllers = this.MasterNavigationController.ViewControllers;
+                //    var newcontrollers = new UIViewController[controllers.Length - 1];
+                    
+                //    this.MasterNavigationController.ViewControllers = newcontrollers;
+                //}
+            }
             base.Show(request);
         }
 
@@ -36,7 +40,21 @@ namespace XamMvvmAndWebServices.iOS.Helpers
         {
             if (hint is ClearBackStackHint)
             {
-               MasterNavigationController.PopViewController(false);
+                //this approach navigates to another screen and then removes the back button
+                if (this.MasterNavigationController != null)
+                {
+                    var controllers = this.MasterNavigationController.ViewControllers;
+                    var newcontrollers = new UIViewController[controllers.Length - 1];
+                    int index = 0;
+                    foreach (var item in controllers)
+                    {
+                        newcontrollers[index] = item;
+                        index++;
+                        if (index == controllers.Length - 1)
+                            break;
+                    }
+                    this.MasterNavigationController.ViewControllers = newcontrollers;
+                }
             }
 
             base.ChangePresentation(hint);

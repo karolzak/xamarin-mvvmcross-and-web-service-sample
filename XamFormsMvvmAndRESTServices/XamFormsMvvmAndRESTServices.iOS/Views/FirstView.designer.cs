@@ -20,6 +20,10 @@ namespace XamMvvmAndWebServices.iOS.Views
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UITableView TableViewEmployees { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UIButton testButton { get; set; }
 
         [Outlet]
@@ -35,6 +39,11 @@ namespace XamMvvmAndWebServices.iOS.Views
             if (Label != null) {
                 Label.Dispose ();
                 Label = null;
+            }
+
+            if (TableViewEmployees != null) {
+                TableViewEmployees.Dispose ();
+                TableViewEmployees = null;
             }
 
             if (testButton != null) {
