@@ -3,6 +3,8 @@ using MvvmCross.Binding.BindingContext;
 using MvvmCross.iOS.Views;
 using UIKit;
 using MvvmCross.Binding.iOS.Views;
+using XamMvvmAndWebServices.iOS.Helpers;
+using System.Collections.Generic;
 
 namespace XamMvvmAndWebServices.iOS.Views
 {
@@ -17,12 +19,24 @@ namespace XamMvvmAndWebServices.iOS.Views
         public override void ViewDidLoad()
         {
             base.ViewDidLoad();
-            var source = new MvxStandardTableViewSource(TableViewEmployees);
+            //var source = new MvxStandardTableViewSource(TableViewEmployees);
+           
+            //TableViewEmployees.Source = source;
             var set = this.CreateBindingSet<FirstView, ViewModels.FirstViewModel>();
-            set.Bind(Label).To(vm => vm.PageTitle);
-            set.Bind(TextField).To(vm => vm.PageTitle);
-            set.Bind(TableViewEmployees).To(vm => vm.Employees);
+            var source = new EmployeeTableViewSource(TableViewEmployees);
+            //{
+            //    UseAnimations = true,
+            //    AddAnimation = UITableViewRowAnimation.Left,
+            //    RemoveAnimation = UITableViewRowAnimation.Right
+            //};
+            set.Bind(source).To(vm => vm.Employees);
             set.Apply();
+            //this.AddBindings(new Dictionary<object, string>
+            //    {
+            //        {source, "ItemsSource Employees"}
+            //    });
+            TableViewEmployees.Source = source;
+            TableViewEmployees.ReloadData();
         }
     }
 }

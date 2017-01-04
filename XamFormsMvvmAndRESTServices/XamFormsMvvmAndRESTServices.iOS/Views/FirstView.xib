@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
@@ -7,8 +7,6 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FirstView">
             <connections>
                 <outlet property="view" destination="2" id="RRd-Eg-VrN"/>
-                <outlet property="Label" destination="5" id="name-outlet-5"/>
-                <outlet property="TextField" destination="10" id="name-outlet-10"/>
                 <outlet property="TableViewEmployees" destination="28" id="name-outlet-28"/>
             </connections>
         </placeholder>
@@ -17,43 +15,18 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <subviews>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" minimumFontSize="10" id="5" translatesAutoresizingMaskIntoConstraints="NO">
-                    <rect key="frame" x="97" y="201" width="580" height="21"/>
-                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="username" borderStyle="roundedRect" minimumFontSize="17" id="10" translatesAutoresizingMaskIntoConstraints="NO" placeholder="usern">
-                    <rect key="frame" x="97" y="251" width="580" height="30"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
-                </textField>
-                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="24" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" onImage="Icon-Small-40.png" offImage="Icon-60.png" selected="YES" enabled="NO">
-                    <rect key="frame" x="20" y="244" width="51" height="31"/>
-                </switch>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="28" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
-                    <rect key="frame" x="20" y="295" width="240" height="128"/>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="28" translatesAutoresizingMaskIntoConstraints="NO">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </tableView>
             </subviews>
-            <constraints>
-                <constraint id="19" firstItem="5" firstAttribute="width" secondItem="2" secondAttribute="width"/>
-                <constraint id="20" firstItem="10" firstAttribute="width" secondItem="5" secondAttribute="width"/>
-            </constraints>
-            <variation key="default">
-                <mask key="constraints">
-                    <exclude reference="19"/>
-                    <exclude reference="20"/>
-                </mask>
-            </variation>
-            <variation key="heightClass=regular-widthClass=compact">
-                <mask key="constraints">
-                    <include reference="19"/>
-                    <include reference="20"/>
-                </mask>
-            </variation>
             <accessibility key="accessibilityConfiguration" label="afwrwarwa"/>
+            <constraints>
+                <constraint id="37" firstItem="28" firstAttribute="top" secondItem="2" secondAttribute="top"/>
+                <constraint id="43" firstItem="28" firstAttribute="bottom" secondItem="2" secondAttribute="bottom"/>
+                <constraint id="44" firstItem="28" firstAttribute="trailing" secondItem="2" secondAttribute="trailing"/>
+                <constraint id="45" firstItem="28" firstAttribute="leading" secondItem="2" secondAttribute="leading"/>
+            </constraints>
         </view>
     </objects>
     <resources>
@@ -66,6 +39,8 @@
         <image name="Icon-Small.png" width="29" height="29"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
 </document>
