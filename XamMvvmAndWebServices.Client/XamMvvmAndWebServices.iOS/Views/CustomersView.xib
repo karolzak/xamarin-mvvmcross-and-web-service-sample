@@ -4,32 +4,22 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FirstView">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CustomersView">
             <connections>
                 <outlet property="view" destination="2" id="RRd-Eg-VrN"/>
-                <outlet property="TableViewEmployees" destination="28" id="name-outlet-28"/>
+                <outlet property="TableViewCustomers" destination="5" id="name-outlet-5"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="2">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="28" translatesAutoresizingMaskIntoConstraints="NO" allowsSelectionDuringEditing="YES">
-                    <rect key="frame" x="0.0" y="26" width="320" height="428"/>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="5" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                    <rect key="frame" x="0.0" y="1" width="240" height="128"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </tableView>
             </subviews>
-            <accessibility key="accessibilityConfiguration" label="afwrwarwa"/>
-            <constraints>
-                <constraint id="44" firstItem="28" firstAttribute="trailing" secondItem="2" secondAttribute="trailing"/>
-                <constraint id="45" firstItem="28" firstAttribute="leading" secondItem="2" secondAttribute="leading"/>
-                <constraint id="61" firstItem="28" firstAttribute="top" secondItem="2" secondAttribute="top" constant="26"/>
-                <constraint id="62" firstItem="28" firstAttribute="trailing" secondItem="2" secondAttribute="trailing"/>
-                <constraint id="63" firstItem="28" firstAttribute="leading" secondItem="2" secondAttribute="leading"/>
-                <constraint id="64" firstItem="2" firstAttribute="bottom" secondItem="28" secondAttribute="bottom" constant="26"/>
-            </constraints>
-            <point key="canvasLocation" x="-254" y="12"/>
         </view>
     </objects>
     <resources>

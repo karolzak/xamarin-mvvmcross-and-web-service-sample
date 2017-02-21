@@ -11,17 +11,17 @@ using XamMvvmAndWebServices.iOS.Views.Cells;
 
 namespace XamMvvmAndWebServices.iOS.Helpers
 {
-    public class EmployeeTableViewSource : MvxSimpleTableViewSource
+    public class CustomerTableViewSource : MvxSimpleTableViewSource
 
     {
-        //public EmployeeTableViewSource(UITableView tableView)
+        //public CustomerTableViewSource(UITableView tableView)
 
-        //        : base(tableView, typeof(EmployeeCellView))
+        //        : base(tableView, typeof(CustomerCellView))
 
         //{
         //}
-        public EmployeeTableViewSource(UITableView tableView)
-                : base(tableView, "EmployeeCellView", "EmployeeCellView")
+        public CustomerTableViewSource(UITableView tableView)
+                : base(tableView, "CustomerCellView", "CustomerCellView")
             {
         }
         
@@ -34,12 +34,12 @@ namespace XamMvvmAndWebServices.iOS.Helpers
 
     }
 
-    //public class EmployeeTableViewSource:UITableViewSource
+    //public class CustomerTableViewSource:UITableViewSource
     //{
 
     //    public override UITableViewCell GetCell(UITableView tableView, NSIndexPath indexPath)
     //    {
-    //        var conference = _employees[indexPath.Row];
+    //        var conference = _Customers[indexPath.Row];
     //        var cell = (MyCustomCell)tableView.DequeueReusableCell(MyCustomCell.Key);
     //        if (cell == null)
     //        {

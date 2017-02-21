@@ -169,13 +169,13 @@ namespace XamMvvmAndWebServices.ViewModels
 
 
 
-        private MvxCommand _navigateToCustomersCommand;
+        private MvxCommand<object> _navigateToCustomersCommand;
         public ICommand NavigateToCustomersCommand
         {
             get
             {
 
-                _navigateToCustomersCommand = _navigateToCustomersCommand ?? new MvxCommand(() => NavigateToCustomers());
+                _navigateToCustomersCommand = _navigateToCustomersCommand ?? new MvxCommand<object>(NavigateToCustomers);
 
                 return _navigateToCustomersCommand;
             }
@@ -213,10 +213,11 @@ namespace XamMvvmAndWebServices.ViewModels
             var Employee = await _apiService.Employees.GetEmployeesAsync();
         }
 
-        private void NavigateToCustomers()
+        private void NavigateToCustomers(object param)
         {
+            
             //SHOW: Navigation - passing parameters
-            ShowViewModel<CustomersViewModel>(new NavigationParameters() { EmployeeId=(int)_selectedEmployee.Id});
+            ShowViewModel<CustomersViewModel>(new NavigationParameters() { EmployeeId= (int)(param as Employee).Id });
             //ShowViewModel<EmployeesViewModel>();
         }
         private void AddEdit(string param)

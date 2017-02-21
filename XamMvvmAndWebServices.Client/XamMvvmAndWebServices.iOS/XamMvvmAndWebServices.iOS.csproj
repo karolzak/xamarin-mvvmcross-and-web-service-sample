@@ -89,7 +89,12 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="DebugTrace.cs" />
+    <Compile Include="Helpers\CustomerTableViewSource.cs" />
     <Compile Include="Helpers\EmployeeTableViewSource.cs" />
+    <Compile Include="Views\Cells\CustomerCellView.cs" />
+    <Compile Include="Views\Cells\CustomerCellView.designer.cs">
+      <DependentUpon>CustomerCellView.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Cells\EmployeeCellView.cs" />
     <Compile Include="Views\Cells\EmployeeCellView.designer.cs">
       <DependentUpon>EmployeeCellView.cs</DependentUpon>
@@ -97,6 +102,10 @@
     <Compile Include="Helpers\CustomViewPresenter.cs" />
     <Compile Include="LinkerPleaseInclude.cs" />
     <Compile Include="Services\DialogService.cs" />
+    <Compile Include="Views\CustomersView.cs" />
+    <Compile Include="Views\CustomersView.designer.cs">
+      <DependentUpon>CustomersView.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\FirstView.cs" />
     <Compile Include="Views\FirstView.designer.cs">
       <DependentUpon>FirstView.cs</DependentUpon>
@@ -120,6 +129,10 @@
     <InterfaceDefinition Include="Views\FirstView.xib" />
     <InterfaceDefinition Include="Views\LoginView.xib" />
     <InterfaceDefinition Include="Views\Cells\EmployeeCellView.xib">
+      <SubType>Designer</SubType>
+    </InterfaceDefinition>
+    <InterfaceDefinition Include="Views\CustomersView.xib" />
+    <InterfaceDefinition Include="Views\Cells\CustomerCellView.xib">
       <SubType>Designer</SubType>
     </InterfaceDefinition>
   </ItemGroup>

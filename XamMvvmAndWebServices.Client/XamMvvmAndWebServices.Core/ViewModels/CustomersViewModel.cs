@@ -67,7 +67,7 @@ namespace XamMvvmAndWebServices.ViewModels
         {
             get
             {
-                _addEditCommand = _addEditCommand ?? new MvxCommand<string>((param) => AddEdit(param));
+                _addEditCommand = _addEditCommand ?? new MvxCommand<string>(AddEdit);
                 return _addEditCommand;
             }
         }
@@ -77,7 +77,7 @@ namespace XamMvvmAndWebServices.ViewModels
         {
             get
             {
-                _navigateToOrdersCommand = _navigateToOrdersCommand ?? new MvxCommand(() => NavigateToOrders());
+                _navigateToOrdersCommand = _navigateToOrdersCommand ?? new MvxCommand( NavigateToOrders);
                 return _navigateToOrdersCommand;
             }
         }
@@ -88,7 +88,7 @@ namespace XamMvvmAndWebServices.ViewModels
         {
             get
             {
-                _goBackCommand = _goBackCommand ?? new MvxCommand(() => GoBack());
+                _goBackCommand = _goBackCommand ?? new MvxCommand( GoBack);
                 return _goBackCommand;
             }
         }
@@ -111,7 +111,7 @@ namespace XamMvvmAndWebServices.ViewModels
         private void NavigateToOrders()
         {
             //ShowViewModel<CustomersViewModel>();
-
+            
             ShowViewModel<OrdersViewModel>(new NavigationParameters() { CustomerId = (int)_selectedCustomer.Id });
             // ShowViewModel<OrdersViewModel>();
         }

@@ -12,8 +12,8 @@ using UIKit;
 
 namespace XamMvvmAndWebServices.iOS.Views.Cells
 {
-    [Register ("EmployeeCellView")]
-    partial class EmployeeCellView
+    [Register ("CustomerCellView")]
+    partial class CustomerCellView
     {
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
@@ -21,11 +21,7 @@ namespace XamMvvmAndWebServices.iOS.Views.Cells
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UILabel LabelFirstname { get; set; }
-
-        [Outlet]
-        [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UILabel LabelLastname { get; set; }
+        UIKit.UILabel LabelCustomerName { get; set; }
 
         void ReleaseDesignerOutlets ()
         {
@@ -34,14 +30,9 @@ namespace XamMvvmAndWebServices.iOS.Views.Cells
                 LabelCustomerCount = null;
             }
 
-            if (LabelFirstname != null) {
-                LabelFirstname.Dispose ();
-                LabelFirstname = null;
-            }
-
-            if (LabelLastname != null) {
-                LabelLastname.Dispose ();
-                LabelLastname = null;
+            if (LabelCustomerName != null) {
+                LabelCustomerName.Dispose ();
+                LabelCustomerName = null;
             }
         }
     }
