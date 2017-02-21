@@ -11,19 +11,17 @@ using XamMvvmAndWebServices.iOS.Views.Cells;
 
 namespace XamMvvmAndWebServices.iOS.Helpers
 {
-    public class CustomerTableViewSource : MvxSimpleTableViewSource
+    public class OrderTableViewSource : MvxSimpleTableViewSource
 
     {
-        //public CustomerTableViewSource(UITableView tableView)
+        //public EmployeeTableViewSource(UITableView tableView)
 
-        //        : base(tableView, typeof(CustomerCellView))
+        //        : base(tableView, typeof(EmployeeCellView))
 
         //{
         //}
-
-            
-        public CustomerTableViewSource(UITableView tableView)
-                : base(tableView, "CustomerCellView", "CustomerCellView")
+        public OrderTableViewSource(UITableView tableView)
+                : base(tableView, "OrderCellView", "OrderCellView")
             {
         }
         
@@ -31,17 +29,17 @@ namespace XamMvvmAndWebServices.iOS.Helpers
         public override void RowSelected(UITableView tableView, NSIndexPath indexPath)
         {
             base.RowSelected(tableView, indexPath);
-          
+            
         }
 
     }
 
-    //public class CustomerTableViewSource:UITableViewSource
+    //public class EmployeeTableViewSource:UITableViewSource
     //{
 
     //    public override UITableViewCell GetCell(UITableView tableView, NSIndexPath indexPath)
     //    {
-    //        var conference = _Customers[indexPath.Row];
+    //        var conference = _employees[indexPath.Row];
     //        var cell = (MyCustomCell)tableView.DequeueReusableCell(MyCustomCell.Key);
     //        if (cell == null)
     //        {

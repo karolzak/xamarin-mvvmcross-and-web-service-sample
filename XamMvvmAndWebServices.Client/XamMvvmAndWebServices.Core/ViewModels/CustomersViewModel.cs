@@ -72,12 +72,12 @@ namespace XamMvvmAndWebServices.ViewModels
             }
         }
 
-        private MvxCommand _navigateToOrdersCommand;
+        private MvxCommand<object> _navigateToOrdersCommand;
         public ICommand NavigateToOrdersCommand
         {
             get
             {
-                _navigateToOrdersCommand = _navigateToOrdersCommand ?? new MvxCommand( NavigateToOrders);
+                _navigateToOrdersCommand = _navigateToOrdersCommand ?? new MvxCommand<object>( NavigateToOrders);
                 return _navigateToOrdersCommand;
             }
         }
@@ -108,11 +108,11 @@ namespace XamMvvmAndWebServices.ViewModels
 
         }
 
-        private void NavigateToOrders()
+        private void NavigateToOrders(object param)
         {
             //ShowViewModel<CustomersViewModel>();
             
-            ShowViewModel<OrdersViewModel>(new NavigationParameters() { CustomerId = (int)_selectedCustomer.Id });
+            ShowViewModel<OrdersViewModel>(new NavigationParameters() { CustomerId = (int)(param as Customer).Id });
             // ShowViewModel<OrdersViewModel>();
         }
 

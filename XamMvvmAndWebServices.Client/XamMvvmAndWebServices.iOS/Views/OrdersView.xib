@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CustomersView">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OrdersView">
             <connections>
                 <outlet property="view" destination="2" id="RRd-Eg-VrN"/>
-                <outlet property="TableViewCustomers" destination="5" id="name-outlet-5"/>
+                <outlet property="TableViewOrders" destination="7" id="name-outlet-7"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -15,16 +15,16 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="5" translatesAutoresizingMaskIntoConstraints="NO">
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="7" translatesAutoresizingMaskIntoConstraints="NO">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </tableView>
             </subviews>
             <constraints>
-                <constraint id="8" firstItem="5" firstAttribute="top" secondItem="2" secondAttribute="top"/>
-                <constraint id="9" firstItem="5" firstAttribute="trailing" secondItem="2" secondAttribute="trailing"/>
-                <constraint id="10" firstItem="5" firstAttribute="leading" secondItem="2" secondAttribute="leading"/>
-                <constraint id="11" firstItem="5" firstAttribute="bottom" secondItem="2" secondAttribute="bottom"/>
+                <constraint id="12" firstItem="7" firstAttribute="top" secondItem="2" secondAttribute="top"/>
+                <constraint id="13" firstItem="7" firstAttribute="trailing" secondItem="2" secondAttribute="trailing"/>
+                <constraint id="14" firstItem="7" firstAttribute="bottom" secondItem="2" secondAttribute="bottom"/>
+                <constraint id="15" firstItem="7" firstAttribute="leading" secondItem="2" secondAttribute="leading"/>
             </constraints>
         </view>
     </objects>

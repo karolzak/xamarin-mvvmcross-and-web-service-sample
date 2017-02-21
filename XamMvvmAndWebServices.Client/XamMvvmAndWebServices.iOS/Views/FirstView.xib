@@ -16,7 +16,7 @@
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="28" translatesAutoresizingMaskIntoConstraints="NO" allowsSelectionDuringEditing="YES">
-                    <rect key="frame" x="0.0" y="26" width="320" height="428"/>
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </tableView>
             </subviews>
@@ -24,10 +24,8 @@
             <constraints>
                 <constraint id="44" firstItem="28" firstAttribute="trailing" secondItem="2" secondAttribute="trailing"/>
                 <constraint id="45" firstItem="28" firstAttribute="leading" secondItem="2" secondAttribute="leading"/>
-                <constraint id="61" firstItem="28" firstAttribute="top" secondItem="2" secondAttribute="top" constant="26"/>
-                <constraint id="62" firstItem="28" firstAttribute="trailing" secondItem="2" secondAttribute="trailing"/>
-                <constraint id="63" firstItem="28" firstAttribute="leading" secondItem="2" secondAttribute="leading"/>
-                <constraint id="64" firstItem="2" firstAttribute="bottom" secondItem="28" secondAttribute="bottom" constant="26"/>
+                <constraint id="67" firstItem="28" firstAttribute="top" secondItem="2" secondAttribute="top"/>
+                <constraint id="68" firstItem="28" firstAttribute="bottom" secondItem="2" secondAttribute="bottom"/>
             </constraints>
             <point key="canvasLocation" x="-254" y="12"/>
         </view>

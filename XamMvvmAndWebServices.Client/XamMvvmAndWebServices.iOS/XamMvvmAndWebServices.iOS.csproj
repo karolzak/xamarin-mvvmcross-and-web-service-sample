@@ -90,6 +90,7 @@
   <ItemGroup>
     <Compile Include="DebugTrace.cs" />
     <Compile Include="Helpers\CustomerTableViewSource.cs" />
+    <Compile Include="Helpers\OrderTableViewSource.cs" />
     <Compile Include="Helpers\EmployeeTableViewSource.cs" />
     <Compile Include="Views\Cells\CustomerCellView.cs" />
     <Compile Include="Views\Cells\CustomerCellView.designer.cs">
@@ -102,9 +103,21 @@
     <Compile Include="Helpers\CustomViewPresenter.cs" />
     <Compile Include="LinkerPleaseInclude.cs" />
     <Compile Include="Services\DialogService.cs" />
+    <Compile Include="Views\Cells\OrderCellView.cs" />
+    <Compile Include="Views\Cells\OrderCellView.designer.cs">
+      <DependentUpon>OrderCellView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CustomerFormView.cs" />
+    <Compile Include="Views\CustomerFormView.designer.cs">
+      <DependentUpon>CustomerFormView.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\CustomersView.cs" />
     <Compile Include="Views\CustomersView.designer.cs">
       <DependentUpon>CustomersView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\EmployeeFormView.cs" />
+    <Compile Include="Views\EmployeeFormView.designer.cs">
+      <DependentUpon>EmployeeFormView.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\FirstView.cs" />
     <Compile Include="Views\FirstView.designer.cs">
@@ -116,6 +129,14 @@
     <Compile Include="Views\LoginView.cs" />
     <Compile Include="Views\LoginView.designer.cs">
       <DependentUpon>LoginView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\OrderFormView.cs" />
+    <Compile Include="Views\OrderFormView.designer.cs">
+      <DependentUpon>OrderFormView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\OrdersView.cs" />
+    <Compile Include="Views\OrdersView.designer.cs">
+      <DependentUpon>OrdersView.cs</DependentUpon>
     </Compile>
     <None Include="app.config" />
     <None Include="Entitlements.plist" />
@@ -135,6 +156,11 @@
     <InterfaceDefinition Include="Views\Cells\CustomerCellView.xib">
       <SubType>Designer</SubType>
     </InterfaceDefinition>
+    <InterfaceDefinition Include="Views\OrdersView.xib" />
+    <InterfaceDefinition Include="Views\EmployeeFormView.xib" />
+    <InterfaceDefinition Include="Views\CustomerFormView.xib" />
+    <InterfaceDefinition Include="Views\OrderFormView.xib" />
+    <InterfaceDefinition Include="Views\Cells\OrderCellView.xib" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\Default-568h%402x.png" />

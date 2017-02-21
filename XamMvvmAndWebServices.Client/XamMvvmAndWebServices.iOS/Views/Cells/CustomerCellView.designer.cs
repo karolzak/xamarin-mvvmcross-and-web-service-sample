@@ -17,22 +17,49 @@ namespace XamMvvmAndWebServices.iOS.Views.Cells
     {
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UILabel LabelCustomerCount { get; set; }
+        UIKit.UILabel LabelAddress { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UILabel LabelCity { get; set; }
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UILabel LabelCustomerName { get; set; }
 
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UILabel LabelDateJoined { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UILabel LabelOrdersCount { get; set; }
+
         void ReleaseDesignerOutlets ()
         {
-            if (LabelCustomerCount != null) {
-                LabelCustomerCount.Dispose ();
-                LabelCustomerCount = null;
+            if (LabelAddress != null) {
+                LabelAddress.Dispose ();
+                LabelAddress = null;
+            }
+
+            if (LabelCity != null) {
+                LabelCity.Dispose ();
+                LabelCity = null;
             }
 
             if (LabelCustomerName != null) {
                 LabelCustomerName.Dispose ();
                 LabelCustomerName = null;
+            }
+
+            if (LabelDateJoined != null) {
+                LabelDateJoined.Dispose ();
+                LabelDateJoined = null;
+            }
+
+            if (LabelOrdersCount != null) {
+                LabelOrdersCount.Dispose ();
+                LabelOrdersCount = null;
             }
         }
     }
