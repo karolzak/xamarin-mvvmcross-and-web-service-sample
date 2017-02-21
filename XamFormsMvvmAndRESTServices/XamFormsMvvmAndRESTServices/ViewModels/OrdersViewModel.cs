@@ -46,6 +46,8 @@ namespace XamMvvmAndWebServices.ViewModels
         public void Init(NavigationParameters param)
         {
             Customer = _apiService.Customers.GetCustomer(param.CustomerId);
+            if (Customer.Orders.Count > 0 & SelectedOrder == null)
+                SelectedOrder = Customer.Orders[0];
         }
 
 

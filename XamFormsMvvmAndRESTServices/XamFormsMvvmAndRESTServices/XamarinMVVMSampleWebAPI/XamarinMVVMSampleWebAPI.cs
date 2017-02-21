@@ -6,13 +6,20 @@ using System.Linq;
 using System.Net.Http;
 using Microsoft.Rest;
 using XamMvvmAndWebServices;
+using System.Configuration;
 
 namespace XamMvvmAndWebServices
 {
     public partial class XamarinMVVMSampleWebAPI : ServiceClient<XamarinMVVMSampleWebAPI>, IXamarinMVVMSampleWebAPI
     {
-        private Uri _baseUri;
-        
+
+        //TODO Change default URI to your service address
+#if DEBUG
+                private Uri _baseUri=new Uri("https://xamarinmvvmsamplewebapi-dev.azurewebsites.net");
+
+#else
+                private Uri _baseUri=new Uri("https://xamarinmvvmsamplewebapi.azurewebsites.net");
+#endif
         /// <summary>
         /// The base URI of the service.
         /// </summary>
@@ -63,8 +70,6 @@ namespace XamMvvmAndWebServices
             this._customers = new Customers(this);
             this._employees = new Employees(this);
             this._orders = new Orders(this);
-            this._baseUri = new Uri("https://xamarinmvvmsamplewebapi.azurewebsites.net");
-            //this._baseUri = new Uri("http://localhost:50676/");
         }
         
         /// <summary>
@@ -80,8 +85,6 @@ namespace XamMvvmAndWebServices
             this._customers = new Customers(this);
             this._employees = new Employees(this);
             this._orders = new Orders(this);
-            this._baseUri = new Uri("https://xamarinmvvmsamplewebapi.azurewebsites.net");
-            //this._baseUri = new Uri("http://localhost:50676/");
         }
         
         /// <summary>
@@ -100,8 +103,6 @@ namespace XamMvvmAndWebServices
             this._customers = new Customers(this);
             this._employees = new Employees(this);
             this._orders = new Orders(this);
-            this._baseUri = new Uri("https://xamarinmvvmsamplewebapi.azurewebsites.net");
-            //this._baseUri = new Uri("http://localhost:50676/");
         }
         
         /// <summary>

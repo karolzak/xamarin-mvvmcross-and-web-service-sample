@@ -20,7 +20,7 @@ namespace XamFormsMvvmAndRestServices.API.Controllers
         // GET: api/Customers
         public IQueryable<Customer> GetCustomers()
         {
-            return db.Customers.Include(q => q.Employee).Include(q => q.Orders);
+            return db.Customers.Include(q => q.Orders);
             //return db.Customers;
         }
 
@@ -28,7 +28,7 @@ namespace XamFormsMvvmAndRestServices.API.Controllers
         [ResponseType(typeof(Customer))]
         public IHttpActionResult GetCustomer(int id)
         {
-            Customer customer = db.Customers.Include(q => q.Employee).Include(q => q.Orders).Single(q => q.Id == id);
+            Customer customer = db.Customers.Include(q => q.Orders).Single(q => q.Id == id);
             //Customer customer = db.Customers.Single(q=>q.Id==id);
             if (customer == null)
             {

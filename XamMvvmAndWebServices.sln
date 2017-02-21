@@ -207,6 +207,8 @@ Global
 		{5C239DFE-F765-4833-87E3-E37AD6F49476}.Release|ARM.Build.0 = Release|ARM
 		{5C239DFE-F765-4833-87E3-E37AD6F49476}.Release|ARM.Deploy.0 = Release|ARM
 		{5C239DFE-F765-4833-87E3-E37AD6F49476}.Release|iPhone.ActiveCfg = Release|x86
+		{5C239DFE-F765-4833-87E3-E37AD6F49476}.Release|iPhone.Build.0 = Release|x86
+		{5C239DFE-F765-4833-87E3-E37AD6F49476}.Release|iPhone.Deploy.0 = Release|x86
 		{5C239DFE-F765-4833-87E3-E37AD6F49476}.Release|iPhoneSimulator.ActiveCfg = Release|x86
 		{5C239DFE-F765-4833-87E3-E37AD6F49476}.Release|x64.ActiveCfg = Release|x64
 		{5C239DFE-F765-4833-87E3-E37AD6F49476}.Release|x64.Build.0 = Release|x64

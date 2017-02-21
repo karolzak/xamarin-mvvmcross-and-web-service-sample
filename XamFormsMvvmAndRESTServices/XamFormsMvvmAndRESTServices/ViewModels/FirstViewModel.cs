@@ -29,11 +29,13 @@ namespace XamMvvmAndWebServices.ViewModels
             foreach (var emp in emps)
             {
                 Employees.Add(emp);
+                if (SelectedEmployee == null)
+                    SelectedEmployee = emp;
             }
           //  Seed();
         }
 
-        public void Seed()
+        private void Seed()
         {
 
             Employee newEmp1 = new Employee()

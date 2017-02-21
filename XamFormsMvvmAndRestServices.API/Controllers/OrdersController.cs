@@ -20,7 +20,7 @@ namespace XamFormsMvvmAndRestServices.API.Controllers
         // GET: api/Orders
         public IQueryable<Order> GetOrders()
         {
-            return db.Orders.Include(q => q.Customer);
+            return db.Orders;
             //return db.Orders;
         }
 
@@ -29,7 +29,7 @@ namespace XamFormsMvvmAndRestServices.API.Controllers
         public IHttpActionResult GetOrder(int id)
         {
             //Order order = db.Orders.Single(q => q.Id == id);
-            Order order = db.Orders.Include(q => q.Customer).Single(q => q.Id == id);
+            Order order = db.Orders.Single(q => q.Id == id);
             if (order == null)
             {
                 return NotFound();

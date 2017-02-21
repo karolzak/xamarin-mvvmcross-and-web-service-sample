@@ -134,6 +134,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\PublishProfiles\XamarinMVVMSampleWebAPI - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\XamarinMVVMSampleWebAPI-dev - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\XamarinMVVMSampleWebAPI.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -153,7 +154,7 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>True</UseIIS>
+          <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>50676</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>

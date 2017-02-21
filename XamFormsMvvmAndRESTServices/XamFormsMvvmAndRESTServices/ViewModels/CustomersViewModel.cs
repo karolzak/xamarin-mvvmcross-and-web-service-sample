@@ -53,8 +53,11 @@ namespace XamMvvmAndWebServices.ViewModels
             var customers = _apiService.Customers.GetCustomers().Where(q=>q.EmployeeId==Employee.Id);
             foreach (var cust in customers)
             {
+                if (SelectedCustomer == null)
+                    SelectedCustomer = cust;
                 Customers.Add(cust);
             }
+
         }
 
         #region Commands
