@@ -99,6 +99,7 @@
 
         </StackPanel>
         <ListView
+            x:Name="orderListViews"
             Grid.Row="2"
             ItemsSource="{Binding Customer.Orders}"
             Margin="0,0,5,0"
@@ -109,7 +110,8 @@
                     EventName="DoubleTapped">
                     <Core:EventTriggerBehavior.Actions>
                         <Core:InvokeCommandAction
-                            Command="{Binding NavigateToOrdersCommand}" />
+                            Command="{Binding NavigateToOrdersCommand}"
+                            CommandParameter="{Binding ElementName=orderListView, Path=SelectedValue}" />
                     </Core:EventTriggerBehavior.Actions>
                 </Core:EventTriggerBehavior>
 

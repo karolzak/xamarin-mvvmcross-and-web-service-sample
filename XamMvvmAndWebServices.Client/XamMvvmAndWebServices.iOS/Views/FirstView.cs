@@ -19,27 +19,36 @@ namespace XamMvvmAndWebServices.iOS.Views
         public override void ViewDidLoad()
         {
             base.ViewDidLoad();
-            //var source = new MvxStandardTableViewSource(TableViewEmployees);
-           
-            //TableViewEmployees.Source = source;
-            var set = this.CreateBindingSet<FirstView, ViewModels.FirstViewModel>();
-            var source = new EmployeeTableViewSource(TableViewEmployees);
-            NavigationItem.Title = "Employees";
 
-            //{
-            //    UseAnimations = true,
-            //    AddAnimation = UITableViewRowAnimation.Left,
-            //    RemoveAnimation = UITableViewRowAnimation.Right
-            //};
+            //Setting toolbar
+            var addButton = new UIBarButtonItem(UIBarButtonSystemItem.Add);
+            //var editButton = new UIBarButtonItem(UIBarButtonSystemItem.Edit);
+            this.SetToolbarItems(new UIBarButtonItem[] 
+            {
+                addButton
+            }, false);
+
+            //Show the bottom toolbar
+            this.NavigationController.NavigationBar.Translucent = false;
+            this.NavigationController.ToolbarHidden = false;
+
+            //Setting source for TableView
+            var source = new EmployeeTableViewSource(TableViewEmployees);
+            
+            //Setting bindings with View Model
+            var set = this.CreateBindingSet<FirstView, ViewModels.FirstViewModel>();          
+            set.Bind(NavigationItem).For(s=>s.Title).To(vm => vm.PageTitle).Apply();
             set.Bind(source).To(vm => vm.Employees).Apply();
             set.Bind(source).For(s => s.SelectedItem).To(vm => vm.SelectedEmployee).Apply();
             set.Bind(source).For(s=>s.SelectionChangedCommand).To(vm => vm.NavigateToCustomersCommand).Apply();
-            //this.AddBindings(new Dictionary<object, string>
-            //    {
-            //        {source, "ItemsSource Employees"}
-            //    });
+            set.Bind(addButton).To(vm => vm.AddCommand).Apply();
+
+            //Filling TableView with data from source
             TableViewEmployees.Source = source;
             TableViewEmployees.ReloadData();
+
+
+
         }        
     }
 }

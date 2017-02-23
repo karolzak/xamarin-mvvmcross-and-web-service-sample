@@ -32,7 +32,7 @@
                 Command="{Binding GoBackCommand}" />-->
         </StackPanel>
 
-        <ListView Grid.Row="1" 
+        <ListView Grid.Row="1" x:Name="employeeListView"
                 ItemsSource="{Binding Employees}"
                 SelectedValue="{Binding SelectedEmployee, Mode=TwoWay}"
                 Margin="0,0,5,0" 
@@ -41,7 +41,7 @@
                 <Core:EventTriggerBehavior EventName="DoubleTapped">
                     <Core:EventTriggerBehavior.Actions>
                         
-                        <Core:InvokeCommandAction Command="{Binding NavigateToCustomersCommand}"/>
+                        <Core:InvokeCommandAction Command="{Binding NavigateToCustomersCommand}" CommandParameter="{Binding ElementName=employeeListView, Path=SelectedValue}"/>
                     </Core:EventTriggerBehavior.Actions>
                 </Core:EventTriggerBehavior>
 

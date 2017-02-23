@@ -20,6 +20,7 @@ namespace XamMvvmAndWebServices.ViewModels
             _apiService = apiService;
         }
 
+        #region Properties
         private NavigationParameters _navParam;
         public NavigationParameters NavParam
         {
@@ -34,48 +35,85 @@ namespace XamMvvmAndWebServices.ViewModels
             set { SetProperty(ref _employee, value); }
         }
 
+        private string _pageTitle = "Employee";
+        public string PageTitle
+        {
+            get { return _pageTitle; }
+            set { SetProperty(ref _pageTitle, value); }
+        }
+        #endregion
 
-       
         //SHOW: Navigation - retrieve parameters
         //used to pass in navigation parameters
         public async void Init(NavigationParameters param)
         {
             NavParam = param;
-            if(param.IsNew)
+            if (param.IsNew)
             {
+                PageTitle = "New employee";
                 Employee = new Employee();
             }
-                else
-            Employee = await _apiService.Employees.GetEmployeeAsync(param.EmployeeId);
+            else
+            {
+                PageTitle = "Edit employee";
+                Employee = await _apiService.Employees.GetEmployeeAsync(param.EmployeeId);
+            }
         }
 
         #region Commands
-        private MvxCommand<string> _goBackCommand;
+        private MvxCommand<object> _goBackCommand;
         public ICommand GoBackCommand
         {
             get
             {
-                _goBackCommand = _goBackCommand ?? new MvxCommand<string>(async (param) => await GoBack(param));
+                _goBackCommand = _goBackCommand ?? new MvxCommand<object>(GoBack);
                 return _goBackCommand;
+            }
+        }
+
+        private MvxCommand<object> _discardCommand;
+        public ICommand DiscardCommand
+        {
+            get
+            {
+                _discardCommand = _discardCommand ?? new MvxCommand<object>(DiscardForm);
+                return _discardCommand;
+            }
+        }
+
+        private MvxCommand<object> _saveCommand;
+        public ICommand SaveCommand
+        {
+            get
+            {
+                _saveCommand = _saveCommand ?? new MvxCommand<object>(SaveForm);
+                return _saveCommand;
             }
         }
 
         #endregion
 
-        private async Task GoBack(string param)
+        private  void GoBack(object param)
         {
-            if (param=="save")
-            {
+           
+            Close(this);
+        }
+        private async void SaveForm(object param)
+        {
                 if (NavParam.IsNew)
                 {
-                    Employee= await _apiService.Employees.PostEmployeeAsync(Employee);
+                    Employee = await _apiService.Employees.PostEmployeeAsync(Employee);
                 }
                 else
                 {
-                     await _apiService.Employees.PutEmployeeAsync(NavParam.EmployeeId, Employee);
-                    
+                    await _apiService.Employees.PutEmployeeAsync(NavParam.EmployeeId, Employee);
+
                 }
-            }
+
+            Close(this);
+        }
+        private  void DiscardForm(object param)
+        {
             
             Close(this);
         }

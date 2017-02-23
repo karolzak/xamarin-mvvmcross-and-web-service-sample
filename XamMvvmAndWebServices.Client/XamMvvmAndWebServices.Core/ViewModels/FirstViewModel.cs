@@ -139,30 +139,22 @@ namespace XamMvvmAndWebServices.ViewModels
 
         #region Commands
         //SHOW: VM Commands
-        private MvxCommand<string> _addEditCommand;
-        public ICommand AddEditCommand
-        {
-            get
-            {
-                _addEditCommand = _addEditCommand ?? new MvxCommand<string>((param) => AddEdit(param));
-                return _addEditCommand;
-            }
-        }
-        private MvxCommand _addCommand;
+        
+        private MvxCommand<object> _addCommand;
         public ICommand AddCommand
         {
             get
             {
-                _addCommand = _addCommand ?? new MvxCommand(() => AddEdit("add"));
+                _addCommand = _addCommand ?? new MvxCommand<object>(Add);
                 return _addCommand;
             }
         }
-        private MvxCommand _editCommand;
+        private MvxCommand<object> _editCommand;
         public ICommand EditCommand
         {
             get
             {
-                _editCommand = _editCommand ?? new MvxCommand(() => AddEdit("edit"));
+                _editCommand = _editCommand ?? new MvxCommand<object>(Edit);
                 return _editCommand;
             }
         }
@@ -220,19 +212,15 @@ namespace XamMvvmAndWebServices.ViewModels
             ShowViewModel<CustomersViewModel>(new NavigationParameters() { EmployeeId= (int)(param as Employee).Id });
             //ShowViewModel<EmployeesViewModel>();
         }
-        private void AddEdit(string param)
+        private void Add(object param)
+        {
+                ShowViewModel<EmployeeFormViewModel>(new NavigationParameters() { IsNew=true });
+        }
+        private void Edit(object param)
         {
             
-            if (param == "add")
-            {
-                ShowViewModel<EmployeeFormViewModel>(new NavigationParameters() { IsNew=true });
-            }
-            else if(param == "edit")
-            {
+                ShowViewModel<EmployeeFormViewModel>(new NavigationParameters() { EmployeeId = (int)(param as Employee).Id });
 
-                ShowViewModel<EmployeeFormViewModel>(new NavigationParameters() { EmployeeId = (int)_selectedEmployee.Id });
-            }
-            
         }
         private void GoBack()
         {

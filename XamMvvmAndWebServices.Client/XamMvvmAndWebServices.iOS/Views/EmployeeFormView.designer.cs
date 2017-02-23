@@ -14,8 +14,25 @@ namespace XamMvvmAndWebServices.iOS.Views
     [Register ("EmployeeFormView")]
     partial class EmployeeFormView
     {
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UITextField TextFieldFirstName { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UITextField TextFieldLastName { get; set; }
+
         void ReleaseDesignerOutlets ()
         {
+            if (TextFieldFirstName != null) {
+                TextFieldFirstName.Dispose ();
+                TextFieldFirstName = null;
+            }
+
+            if (TextFieldLastName != null) {
+                TextFieldLastName.Dispose ();
+                TextFieldLastName = null;
+            }
         }
     }
 }

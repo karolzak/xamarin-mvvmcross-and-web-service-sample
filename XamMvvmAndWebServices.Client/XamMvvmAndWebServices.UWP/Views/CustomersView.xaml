@@ -70,7 +70,7 @@
                 </StackPanel>
 
             </StackPanel>
-        <ListView Grid.Row="2" 
+        <ListView Grid.Row="2" x:Name="customerListView"
                 ItemsSource="{Binding Customers}"
                 SelectedValue="{Binding SelectedCustomer, Mode=TwoWay}"
                 Margin="0,0,5,0" ItemTemplate="{StaticResource CustomerDataTemplate}">
@@ -78,7 +78,9 @@
                     <Core:EventTriggerBehavior EventName="DoubleTapped">
                         <Core:EventTriggerBehavior.Actions>
 
-                            <Core:InvokeCommandAction Command="{Binding NavigateToOrdersCommand}"/>
+                        <Core:InvokeCommandAction
+                            Command="{Binding NavigateToOrdersCommand}"
+                            CommandParameter="{Binding ElementName=customerListView, Path=SelectedValue}" />
                         </Core:EventTriggerBehavior.Actions>
                     </Core:EventTriggerBehavior>
 
