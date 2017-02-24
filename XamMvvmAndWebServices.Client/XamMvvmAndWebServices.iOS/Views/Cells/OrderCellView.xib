@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7026.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OrderCellView"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" customClass="OrderCellView" id="cxk-wN-pdQ" rowHeight="44">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cxk-wN-pdQ" id="YTl-1W-gDM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2" translatesAutoresizingMaskIntoConstraints="NO" text="Product name:">
+                        <rect key="frame" x="8" y="0.0" width="88.5" height="21.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quantity:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3" translatesAutoresizingMaskIntoConstraints="NO">
+                        <rect key="frame" x="8" y="22" width="56" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4" translatesAutoresizingMaskIntoConstraints="NO">
+                        <rect key="frame" x="102" y="3" width="33" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="5" translatesAutoresizingMaskIntoConstraints="NO">
+                        <rect key="frame" x="69" y="24" width="33" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint id="6" firstItem="2" firstAttribute="top" secondItem="YTl-1W-gDM" secondAttribute="top"/>
+                    <constraint id="7" firstItem="2" firstAttribute="leading" secondItem="YTl-1W-gDM" secondAttribute="leading" constant="8"/>
+                    <constraint id="8" firstItem="YTl-1W-gDM" firstAttribute="bottom" secondItem="2" secondAttribute="bottom" constant="22"/>
+                    <constraint id="11" firstItem="3" firstAttribute="top" secondItem="2" secondAttribute="bottom" constant="1"/>
+                    <constraint id="12" firstItem="3" firstAttribute="leading" secondItem="YTl-1W-gDM" secondAttribute="leading" constant="8"/>
+                    <constraint id="13" firstItem="3" firstAttribute="bottom" secondItem="YTl-1W-gDM" secondAttribute="bottom"/>
+                    <constraint id="22" firstItem="4" firstAttribute="leading" secondItem="2" secondAttribute="trailing" constant="5"/>
+                    <constraint id="23" firstItem="YTl-1W-gDM" firstAttribute="bottom" secondItem="4" secondAttribute="bottom" constant="24"/>
+                    <constraint id="24" firstItem="5" firstAttribute="leading" secondItem="3" secondAttribute="trailing" constant="5"/>
+                    <constraint id="25" firstItem="5" firstAttribute="top" secondItem="2" secondAttribute="top" constant="24"/>
+                    <constraint id="26" firstItem="YTl-1W-gDM" firstAttribute="bottom" secondItem="5" secondAttribute="bottom" constant="1"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="LabelProductName" destination="4" id="name-outlet-4"/>
+                <outlet property="LabelQuantity" destination="5" id="name-outlet-5"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Default-568h.png" width="320" height="568"/>
+        <image name="Default-Portrait.png" width="768" height="1004"/>
+        <image name="Default.png" width="320" height="480"/>
+        <image name="Icon-60.png" width="60" height="60"/>
+        <image name="Icon-76.png" width="76" height="76"/>
+        <image name="Icon-Small-40.png" width="40" height="40"/>
+        <image name="Icon-Small.png" width="29" height="29"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>
