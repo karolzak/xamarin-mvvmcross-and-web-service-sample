@@ -16,6 +16,7 @@ namespace XamMvvmAndWebServices.iOS.Views.Cells
 
         {
 
+            this.Accessory = UITableViewCellAccessory.DetailButton;  // implement AccessoryButtonTapped
         }
         public string ProductName
 

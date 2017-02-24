@@ -14,6 +14,8 @@ namespace XamMvvmAndWebServices.ViewModels
 {
     public class CustomersViewModel : MvxViewModel
     {
+        #region Properties
+
         private string _pageTitle = "Customers";
         public string PageTitle
         {
@@ -38,6 +40,8 @@ namespace XamMvvmAndWebServices.ViewModels
         public ObservableCollection<Customer> Customers { get; private set; }
         private IXamarinMVVMSampleWebAPI _apiService;
 
+        #endregion
+
         public CustomersViewModel(IXamarinMVVMSampleWebAPI apiService)
         {
             _apiService = apiService;
@@ -49,18 +53,21 @@ namespace XamMvvmAndWebServices.ViewModels
         {
             Employee = _apiService.Employees.GetEmployee(param.EmployeeId);
             Customers = new ObservableCollection<Customer>();
-
-            var customers = _apiService.Customers.GetCustomers().Where(q=>q.EmployeeId==Employee.Id);
-            foreach (var cust in customers)
-            {
-                if (SelectedCustomer == null)
-                    SelectedCustomer = cust;
-                Customers.Add(cust);
-            }
+            Reload(null);
 
         }
 
         #region Commands
+
+        private MvxCommand<object> _reloadCommand;
+        public ICommand ReloadCommand
+        {
+            get
+            {
+                _reloadCommand = _reloadCommand ?? new MvxCommand<object>(Reload);
+                return _reloadCommand;
+            }
+        }
 
         private MvxCommand<object> _addCommand;
         public ICommand AddCommand
@@ -103,9 +110,22 @@ namespace XamMvvmAndWebServices.ViewModels
         }
 
 
-       
-#endregion
+
+        #endregion
         #region Methods
+                private void Reload(object param)
+        {
+            Customers.Clear();
+
+            var customers = _apiService.Customers.GetCustomers().Where(q => q.EmployeeId == Employee.Id);
+            foreach (var cust in customers)
+            {
+                if (SelectedCustomer == null)
+                    SelectedCustomer = cust;
+                Customers.Add(cust);
+            }
+        }
+
         private void Add(object param)
         {
                 ShowViewModel<CustomerFormViewModel>(new NavigationParameters() { IsNew = true, EmployeeId = (int)_employee.Id });

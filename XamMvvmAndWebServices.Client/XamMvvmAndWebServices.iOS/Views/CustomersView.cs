@@ -4,6 +4,7 @@ using System;
 
 using UIKit;
 using XamMvvmAndWebServices.iOS.Helpers;
+using XamMvvmAndWebServices.ViewModels;
 
 namespace XamMvvmAndWebServices.iOS.Views
 {
@@ -11,6 +12,14 @@ namespace XamMvvmAndWebServices.iOS.Views
     {
         public CustomersView() : base("CustomersView", null)
         {
+        }
+
+        public override void ViewWillAppear(bool animated)
+        {
+            base.ViewWillAppear(animated);
+            (ViewModel as CustomersViewModel).ReloadCommand.Execute(null);
+            TableViewCustomers.ReloadData();
+
         }
 
         public override void DidReceiveMemoryWarning()
@@ -26,27 +35,37 @@ namespace XamMvvmAndWebServices.iOS.Views
             TableViewCustomers.EstimatedRowHeight = 100;
             TableViewCustomers.RowHeight = 100;
             
+            //Setting bottom toolbar
+            var addButton = new UIBarButtonItem(UIBarButtonSystemItem.Add);
+            this.SetToolbarItems(new UIBarButtonItem[]
+            {
+                addButton
 
-           var set = this.CreateBindingSet<CustomersView, ViewModels.CustomersViewModel>();
-            
+            }, false);
+
+            //Show the bottom toolbar
+            this.NavigationController.NavigationBar.Translucent = false;
+            this.NavigationController.ToolbarHidden = false;
+
+            //Setting source for TableView
             var source = new CustomerTableViewSource(TableViewCustomers);
-            NavigationItem.Title = "Customers";
-            //{
-            //    UseAnimations = true,
-            //    AddAnimation = UITableViewRowAnimation.Left,
-            //    RemoveAnimation = UITableViewRowAnimation.Right
-            //};
-            //set.Bind(NavigationItem.BackBarButtonItem).To(vm => vm.GoBackCommand).Apply();
+
+            //Setting bindings to View Model
+            var set = this.CreateBindingSet<CustomersView, ViewModels.CustomersViewModel>();
+            //Binding PageTitle and TableView source
+            set.Bind(NavigationItem).For(s => s.Title).To(vm => vm.PageTitle).Apply();
             set.Bind(source).To(vm => vm.Customers).Apply();
-            set.Bind(source).For(s=>s.SelectedItem).To(vm => vm.SelectedCustomer).Apply();
+            set.Bind(source).For(s => s.SelectedItem).To(vm => vm.SelectedCustomer).Apply();
+            //Binding navigation commands and add/edit
             set.Bind(source).For(s => s.SelectionChangedCommand).To(vm => vm.NavigateToOrdersCommand).Apply();
-            
-            //this.AddBindings(new Dictionary<object, string>
-            //    {
-            //        {source, "ItemsSource Employees"}
-            //    });
+            set.Bind(addButton).To(vm => vm.AddCommand).Apply();
+            set.Bind(source).For(s => s.AccessoryTappedCommand).To(vm => vm.EditCommand).Apply();
+
+
+            //Filling TableView with data from source
             TableViewCustomers.Source = source;
             TableViewCustomers.ReloadData();
+
         }
         
     }

@@ -4,6 +4,7 @@ using System;
 
 using UIKit;
 using XamMvvmAndWebServices.iOS.Helpers;
+using XamMvvmAndWebServices.ViewModels;
 
 namespace XamMvvmAndWebServices.iOS.Views
 {
@@ -11,6 +12,14 @@ namespace XamMvvmAndWebServices.iOS.Views
     {
         public OrdersView() : base("OrdersView", null)
         {
+        }
+        
+        public override void ViewWillAppear(bool animated)
+        {
+            base.ViewWillAppear(animated);
+            (ViewModel as OrdersViewModel).ReloadCommand.Execute(null);
+            TableViewOrders.ReloadData();
+
         }
 
         public override void DidReceiveMemoryWarning()
@@ -23,24 +32,34 @@ namespace XamMvvmAndWebServices.iOS.Views
         public override void ViewDidLoad()
         {
             base.ViewDidLoad();
-            var set = this.CreateBindingSet<OrdersView, ViewModels.OrdersViewModel>();
+            
+            //Setting bottom toolbar
+            var addButton = new UIBarButtonItem(UIBarButtonSystemItem.Add);
+            this.SetToolbarItems(new UIBarButtonItem[]
+            {
+                addButton
+
+            }, false);
+
+            //Show the bottom toolbar
+            this.NavigationController.NavigationBar.Translucent = false;
+            this.NavigationController.ToolbarHidden = false;
+
+            //Setting source for TableView
             var source = new OrderTableViewSource(TableViewOrders);
-            NavigationItem.Title = "Orders";
 
-            //{
-            //    UseAnimations = true,
-            //    AddAnimation = UITableViewRowAnimation.Left,
-            //    RemoveAnimation = UITableViewRowAnimation.Right
-            //};
-            //set.Bind(NavigationItem.BackBarButtonItem).To(vm => vm.GoBackCommand).Apply();
-            set.Bind(source).To(vm => vm.Customer.Orders).Apply();
+            //Setting bindings to View Model
+            var set = this.CreateBindingSet<OrdersView, ViewModels.OrdersViewModel>();
+            //Binding PageTitle and TableView source
+            set.Bind(NavigationItem).For(s => s.Title).To(vm => vm.PageTitle).Apply();
+            set.Bind(source).To(vm => vm.Orders).Apply();
             set.Bind(source).For(s => s.SelectedItem).To(vm => vm.SelectedOrder).Apply();
-            //set.Bind(source).For(x => x.SelectionChangedCommand).To(vm => vm.NavigateToOrdersCommand).Apply();
+            //Binding navigation commands and add/edit
+            set.Bind(addButton).To(vm => vm.AddCommand).Apply();
+            set.Bind(source).For(s => s.AccessoryTappedCommand).To(vm => vm.EditCommand).Apply();
 
-            //this.AddBindings(new Dictionary<object, string>
-            //    {
-            //        {source, "ItemsSource Employees"}
-            //    });
+
+            //Filling TableView with data from source
             TableViewOrders.Source = source;
             TableViewOrders.ReloadData();
         }

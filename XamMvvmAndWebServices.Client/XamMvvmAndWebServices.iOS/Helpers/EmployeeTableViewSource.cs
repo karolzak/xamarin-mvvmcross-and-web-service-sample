@@ -25,13 +25,30 @@ namespace XamMvvmAndWebServices.iOS.Helpers
             {
         }
         
-
+        
         public override void RowSelected(UITableView tableView, NSIndexPath indexPath)
         {
             base.RowSelected(tableView, indexPath);
             
         }
 
+        public override void AccessoryButtonTapped(UITableView tableView, NSIndexPath indexPath)
+        {
+            base.AccessoryButtonTapped(tableView, indexPath);
+        }
+
+        //One way to handle adding custom actions for rows
+        //public override UITableViewRowAction[] EditActionsForRow(UITableView tableView, NSIndexPath indexPath)
+        //{
+        //    UITableViewRowAction hiButton = UITableViewRowAction.Create(
+        //       UITableViewRowActionStyle.Normal,
+        //       "Edit",
+        //       delegate {
+        //           Console.WriteLine("Hello World!");
+        //       });
+        //    return new UITableViewRowAction[] { hiButton };
+
+        //}
     }
 
     //public class EmployeeTableViewSource:UITableViewSource

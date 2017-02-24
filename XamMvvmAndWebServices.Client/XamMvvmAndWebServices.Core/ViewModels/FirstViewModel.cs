@@ -24,14 +24,8 @@ namespace XamMvvmAndWebServices.ViewModels
 
             _apiService = apiService;
             Employees = new ObservableCollection<Employee>();
-
-            var emps = _apiService.Employees.GetEmployees();
-            foreach (var emp in emps)
-            {
-                Employees.Add(emp);
-                if (SelectedEmployee == null)
-                    SelectedEmployee = emp;
-            }
+            Reload(null);
+           
           //  Seed();
         }
 
@@ -125,6 +119,7 @@ namespace XamMvvmAndWebServices.ViewModels
             get { return _selectedEmployee; }
             set { SetProperty(ref _selectedEmployee, value); }
         }
+        
 
 
         public ObservableCollection<Employee> Employees { get; private set; }
@@ -140,6 +135,16 @@ namespace XamMvvmAndWebServices.ViewModels
         #region Commands
         //SHOW: VM Commands
         
+            private MvxCommand<object> _reloadCommand;
+        public ICommand ReloadCommand
+        {
+            get
+            {
+                _reloadCommand = _reloadCommand ?? new MvxCommand<object>(Reload);
+                return _reloadCommand;
+            }
+        }
+
         private MvxCommand<object> _addCommand;
         public ICommand AddCommand
         {
@@ -199,6 +204,18 @@ namespace XamMvvmAndWebServices.ViewModels
         #endregion
 
         #region Methods
+
+        private void Reload(object param)
+        {
+            Employees.Clear();
+            var emps = _apiService.Employees.GetEmployees();
+            foreach (var emp in emps)
+            {
+                Employees.Add(emp);
+                if (SelectedEmployee == null)
+                    SelectedEmployee = emp;
+            }
+        }
         //SHOW: VM Methods
         private async Task GetEmployees()
         {
@@ -218,10 +235,9 @@ namespace XamMvvmAndWebServices.ViewModels
         }
         private void Edit(object param)
         {
-            
-                ShowViewModel<EmployeeFormViewModel>(new NavigationParameters() { EmployeeId = (int)(param as Employee).Id });
-
+            ShowViewModel<EmployeeFormViewModel>(new NavigationParameters() { EmployeeId = (int)(param as Employee).Id });
         }
+            
         private void GoBack(object param)
         {
             Close(this);

@@ -18,7 +18,8 @@ namespace XamMvvmAndWebServices.iOS.Views.Cells
         public CustomerCellView(IntPtr handle) : base(BindingText, handle)
 
         {
-            
+            this.Accessory = UITableViewCellAccessory.DetailDisclosureButton;  // implement AccessoryButtonTapped
+
         }
         public string CustomerName
 

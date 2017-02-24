@@ -13,12 +13,14 @@ namespace XamMvvmAndWebServices.iOS.Views.Cells
         public static readonly NSString Key = new NSString("EmployeeCellView");
         public static readonly UINib Nib = UINib.FromName("EmployeeCellView", NSBundle.MainBundle);
 
-      
+        
+
 
         public EmployeeCellView(IntPtr handle) : base(BindingText, handle)
 
         {
-
+            this.Accessory = UITableViewCellAccessory.DetailDisclosureButton;  // implement AccessoryButtonTapped
+            //this.Accessory = UITableViewCellAccessory.None; // to clear the accessory
         }
         public string FirstName
 

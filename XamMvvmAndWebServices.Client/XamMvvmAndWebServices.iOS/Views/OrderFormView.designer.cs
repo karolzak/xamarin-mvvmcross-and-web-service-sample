@@ -14,8 +14,25 @@ namespace XamMvvmAndWebServices.iOS.Views
     [Register ("OrderFormView")]
     partial class OrderFormView
     {
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UITextField TextFieldName { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UITextField TextFieldQuantity { get; set; }
+
         void ReleaseDesignerOutlets ()
         {
+            if (TextFieldName != null) {
+                TextFieldName.Dispose ();
+                TextFieldName = null;
+            }
+
+            if (TextFieldQuantity != null) {
+                TextFieldQuantity.Dispose ();
+                TextFieldQuantity = null;
+            }
         }
     }
 }
