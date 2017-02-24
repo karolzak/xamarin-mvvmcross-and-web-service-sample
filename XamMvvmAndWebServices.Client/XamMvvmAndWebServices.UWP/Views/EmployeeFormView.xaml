@@ -54,8 +54,12 @@
     <mvx:MvxWindowsPage.BottomAppBar>
         <AppBar IsSticky="True" IsOpen="True" >
             <StackPanel Orientation="Horizontal">
-                <AppBarButton Icon="Save"  Label="Save" Command="{Binding GoBackCommand}" CommandParameter="save"/>
-                <AppBarButton Icon="Cancel"  Label="Discard" Command="{Binding GoBackCommand}"  CommandParameter="cancel"/>
+                <AppBarButton Icon="Save"  Label="Save" Command="{Binding SaveCommand}" CommandParameter="{Binding Employee}"/>
+                <AppBarButton
+                    Icon="Cancel"
+                    Label="Discard"
+                    Command="{Binding DiscardCommand}"
+                    CommandParameter="{Binding Employee}"/>
             </StackPanel>
         </AppBar>
     </mvx:MvxWindowsPage.BottomAppBar>

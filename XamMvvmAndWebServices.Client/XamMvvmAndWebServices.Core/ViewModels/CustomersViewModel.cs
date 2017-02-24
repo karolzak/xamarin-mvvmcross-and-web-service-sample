@@ -62,13 +62,33 @@ namespace XamMvvmAndWebServices.ViewModels
 
         #region Commands
 
-        private MvxCommand<string> _addEditCommand;
-        public ICommand AddEditCommand
+        private MvxCommand<object> _addCommand;
+        public ICommand AddCommand
         {
             get
             {
-                _addEditCommand = _addEditCommand ?? new MvxCommand<string>(AddEdit);
-                return _addEditCommand;
+                _addCommand = _addCommand ?? new MvxCommand<object>(Add);
+                return _addCommand;
+            }
+        }
+
+        private MvxCommand<object> _editCommand;
+        public ICommand EditCommand
+        {
+            get
+            {
+                _editCommand = _editCommand ?? new MvxCommand<object>(Edit);
+                return _editCommand;
+            }
+        }
+
+        private MvxCommand<object> _goBackCommand;
+        public ICommand GoBackCommand
+        {
+            get
+            {
+                _goBackCommand = _goBackCommand ?? new MvxCommand<object>(GoBack);
+                return _goBackCommand;
             }
         }
 
@@ -83,29 +103,18 @@ namespace XamMvvmAndWebServices.ViewModels
         }
 
 
-        private MvxCommand _goBackCommand;
-        public ICommand GoBackCommand
-        {
-            get
-            {
-                _goBackCommand = _goBackCommand ?? new MvxCommand( GoBack);
-                return _goBackCommand;
-            }
-        }
+       
 #endregion
         #region Methods
-        private void AddEdit(string param)
+        private void Add(object param)
         {
-            if (param == "add")
-            {
                 ShowViewModel<CustomerFormViewModel>(new NavigationParameters() { IsNew = true, EmployeeId = (int)_employee.Id });
-            }
-            else if (param == "edit")
-            {
+            
 
-                ShowViewModel<CustomerFormViewModel>(new NavigationParameters() { CustomerId = (int)_selectedCustomer.Id});
-            }
-
+        }
+        private void Edit(object param)
+        {
+                ShowViewModel<CustomerFormViewModel>(new NavigationParameters() { CustomerId = (int)(param as Customer).Id });
         }
 
         private void NavigateToOrders(object param)
@@ -116,7 +125,7 @@ namespace XamMvvmAndWebServices.ViewModels
             // ShowViewModel<OrdersViewModel>();
         }
 
-        private void GoBack()
+        private void GoBack(object param)
         {
             Close(this);
         }

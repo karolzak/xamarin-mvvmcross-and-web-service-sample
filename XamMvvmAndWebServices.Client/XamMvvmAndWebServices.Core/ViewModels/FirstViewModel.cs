@@ -174,12 +174,12 @@ namespace XamMvvmAndWebServices.ViewModels
         }
 
 
-        private MvxCommand _goBackCommand;
+        private MvxCommand<object> _goBackCommand;
         public ICommand GoBackCommand
         {
             get
             {
-                _goBackCommand = _goBackCommand ?? new MvxCommand(() => GoBack());
+                _goBackCommand = _goBackCommand ?? new MvxCommand<object>(GoBack);
 
                 return _goBackCommand;
             }
@@ -222,7 +222,7 @@ namespace XamMvvmAndWebServices.ViewModels
                 ShowViewModel<EmployeeFormViewModel>(new NavigationParameters() { EmployeeId = (int)(param as Employee).Id });
 
         }
-        private void GoBack()
+        private void GoBack(object param)
         {
             Close(this);
         }

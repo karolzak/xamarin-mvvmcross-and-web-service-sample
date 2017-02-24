@@ -13,7 +13,6 @@ namespace XamMvvmAndWebServices.ViewModels
 {
     public class EmployeeFormViewModel:MvxViewModel
     {
-        private IXamarinMVVMSampleWebAPI _apiService;
 
         public EmployeeFormViewModel(IXamarinMVVMSampleWebAPI apiService)
         {
@@ -21,6 +20,9 @@ namespace XamMvvmAndWebServices.ViewModels
         }
 
         #region Properties
+
+        private IXamarinMVVMSampleWebAPI _apiService;
+
         private NavigationParameters _navParam;
         public NavigationParameters NavParam
         {
@@ -61,6 +63,7 @@ namespace XamMvvmAndWebServices.ViewModels
         }
 
         #region Commands
+
         private MvxCommand<object> _goBackCommand;
         public ICommand GoBackCommand
         {
@@ -93,6 +96,8 @@ namespace XamMvvmAndWebServices.ViewModels
 
         #endregion
 
+        #region Methods
+
         private  void GoBack(object param)
         {
            
@@ -117,5 +122,7 @@ namespace XamMvvmAndWebServices.ViewModels
             
             Close(this);
         }
+
+        #endregion
     }
 }

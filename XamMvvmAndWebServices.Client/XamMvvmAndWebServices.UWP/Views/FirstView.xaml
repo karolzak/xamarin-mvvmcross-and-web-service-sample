@@ -55,8 +55,8 @@
     <mvx:MvxWindowsPage.BottomAppBar>
         <AppBar IsSticky="True" IsOpen="True" >
             <StackPanel Orientation="Horizontal">
-                <AppBarButton Icon="Add"  Label="New" Command="{Binding AddEditCommand}" CommandParameter="add"/>
-                <AppBarButton Icon="Edit"  Label="Edit" Command="{Binding AddEditCommand}"  CommandParameter="edit"/>
+                <AppBarButton Icon="Add"  Label="New" Command="{Binding AddCommand}" />
+                <AppBarButton Icon="Edit"  Label="Edit" Command="{Binding EditCommand}"  CommandParameter="{Binding SelectedEmployee}"/>
             </StackPanel>
         </AppBar>
     </mvx:MvxWindowsPage.BottomAppBar>

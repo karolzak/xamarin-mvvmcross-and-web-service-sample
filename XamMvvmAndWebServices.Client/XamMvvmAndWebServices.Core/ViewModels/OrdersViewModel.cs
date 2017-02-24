@@ -14,6 +14,20 @@ namespace XamMvvmAndWebServices.ViewModels
     public class OrdersViewModel : MvxViewModel
     {
 
+        public OrdersViewModel(IXamarinMVVMSampleWebAPI apiService)
+        {
+            _apiService = apiService;
+        }
+
+        //used to pass in navigation parameters
+        public void Init(NavigationParameters param)
+        {
+            Customer = _apiService.Customers.GetCustomer(param.CustomerId);
+            if (Customer.Orders.Count > 0 & SelectedOrder == null)
+                SelectedOrder = Customer.Orders[0];
+        }
+
+        #region Properties
         private string _pageTitle = "Orders";
         public string PageTitle
         {
@@ -37,59 +51,52 @@ namespace XamMvvmAndWebServices.ViewModels
 
         private IXamarinMVVMSampleWebAPI _apiService;
 
-        public OrdersViewModel(IXamarinMVVMSampleWebAPI apiService)
-        {
-            _apiService = apiService;
-        }
-
-        //used to pass in navigation parameters
-        public void Init(NavigationParameters param)
-        {
-            Customer = _apiService.Customers.GetCustomer(param.CustomerId);
-            if (Customer.Orders.Count > 0 & SelectedOrder == null)
-                SelectedOrder = Customer.Orders[0];
-        }
-
-
+        #endregion
 
         #region Commands
-        private MvxCommand<string> _addEditCommand;
-        public ICommand AddEditCommand
+        private MvxCommand<object> _addCommand;
+        public ICommand AddCommand
         {
             get
             {
-                _addEditCommand = _addEditCommand ?? new MvxCommand<string>((param) => AddEdit(param));
-                return _addEditCommand;
+                _addCommand = _addCommand ?? new MvxCommand<object>(Add);
+                return _addCommand;
             }
         }
 
-        private MvxCommand _goBackCommand;
+        private MvxCommand<object> _editCommand;
+        public ICommand EditCommand
+        {
+            get
+            {
+                _editCommand = _editCommand ?? new MvxCommand<object>(Edit);
+                return _editCommand;
+            }
+        }
+
+        private MvxCommand<object> _goBackCommand;
         public ICommand GoBackCommand
         {
             get
             {
-                _goBackCommand = _goBackCommand ?? new MvxCommand(() => GoBack());
+                _goBackCommand = _goBackCommand ?? new MvxCommand<object>(GoBack);
                 return _goBackCommand;
             }
         }
         #endregion
 
         #region Methods
-        private void AddEdit(string param)
+        private void Add(object param)
         {
-            if (param == "add")
-            {
-                ShowViewModel<OrderFormViewModel>(new NavigationParameters() { IsNew = true, CustomerId = (int)_customer.Id });
-            }
-            else if (param == "edit")
-            {
-
-                ShowViewModel<OrderFormViewModel>(new NavigationParameters() { OrderId = (int)_selectedOrder.Id });
-            }
-
+                ShowViewModel<OrderFormViewModel>(new NavigationParameters() { IsNew = true, CustomerId = (int)_customer.Id });           
+        }
+        
+        private void Edit(object param)
+        {            
+                ShowViewModel<OrderFormViewModel>(new NavigationParameters() { OrderId = (int)(param as Order).Id });           
         }
 
-        private void GoBack()
+        private void GoBack(object param)
         {
             Close(this);
         }

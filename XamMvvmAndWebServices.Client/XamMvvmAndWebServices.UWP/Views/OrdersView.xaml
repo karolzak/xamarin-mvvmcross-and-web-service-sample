@@ -105,17 +105,7 @@
             Margin="0,0,5,0"
             ItemTemplate="{StaticResource OrderDataTemplate}"
             SelectedValue="{Binding SelectedOrder, Mode=TwoWay}">
-            <Interactivity:Interaction.Behaviors>
-                <Core:EventTriggerBehavior
-                    EventName="DoubleTapped">
-                    <Core:EventTriggerBehavior.Actions>
-                        <Core:InvokeCommandAction
-                            Command="{Binding NavigateToOrdersCommand}"
-                            CommandParameter="{Binding ElementName=orderListView, Path=SelectedValue}" />
-                    </Core:EventTriggerBehavior.Actions>
-                </Core:EventTriggerBehavior>
-
-            </Interactivity:Interaction.Behaviors>
+            
 
 
         </ListView>
@@ -131,13 +121,12 @@
                 <AppBarButton
                     Icon="Add"
                     Label="New"
-                    Command="{Binding AddEditCommand}"
-                    CommandParameter="add" />
+                    Command="{Binding AddCommand}" />
                 <AppBarButton
                     Icon="Edit"
                     Label="Edit"
-                    Command="{Binding AddEditCommand}"
-                    CommandParameter="edit" />
+                    Command="{Binding EditCommand}"
+                    CommandParameter="{Binding SelectedOrder}" />
             </StackPanel>
         </AppBar>
     </mvx:MvxWindowsPage.BottomAppBar>
