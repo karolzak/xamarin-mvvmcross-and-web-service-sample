@@ -6,7 +6,6 @@ using System.Linq;
 using System.Net.Http;
 using Microsoft.Rest;
 using XamMvvmAndWebServices;
-using System.Configuration;
 
 namespace XamMvvmAndWebServices
 {
