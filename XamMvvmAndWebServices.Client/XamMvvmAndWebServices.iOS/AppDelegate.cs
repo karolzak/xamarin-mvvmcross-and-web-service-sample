@@ -26,6 +26,10 @@ namespace XamMvvmAndWebServices.iOS
         {
             Window = new UIWindow(UIScreen.MainScreen.Bounds);
 
+#if ENABLE_TEST_CLOUD
+Xamarin.Calabash.Start();
+#endif
+
             var setup = new Setup(this, Window);
             setup.Initialize();
 
