@@ -104,6 +104,8 @@
     <UseVSHostingProcess>false</UseVSHostingProcess>
     <ErrorReport>prompt</ErrorReport>
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodesignKey>iPhone Developer: karol.zak@hotmail.com (L47X7F2R6G)</CodesignKey>
+    <CodesignProvision>60939a68-c9b1-4704-9c35-d5d2b16af783</CodesignProvision>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="DebugTrace.cs" />
