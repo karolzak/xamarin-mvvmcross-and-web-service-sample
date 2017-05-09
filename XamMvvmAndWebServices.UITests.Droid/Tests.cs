@@ -27,16 +27,16 @@ namespace XamMvvmAndWebServices.UITests.Droid
             //    .StartApp();
         }
 
-        [Test]
-        public void AppLaunches()
-        {
-            app.Screenshot("First screen.");
-        }
+        //[Test]
+        //public void Repl()
+        //{
+        //    app.Repl();
+        //}
 
         [Test]
-        public void NewTest()
+        public void FirstTest()
         {
-
+            
             app.WaitForElement(x => x.Id("textView1"));
             app.Screenshot("Waited for view with class: TextView with id: textView1 with text: Login on demo app");
             app.Tap(x => x.Id("TbxUsername"));
@@ -56,6 +56,10 @@ namespace XamMvvmAndWebServices.UITests.Droid
             app.WaitForElement(x => x.Text("edit"));
             app.Screenshot("Waited for view with class: Button with text: edit");
         }
+
+        
+        
+        
         
     }
 }
