@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:local="http://schemas.android.com/apk/res/XamMvvmAndWebServices.Droid" xmlns:android="http://schemas.android.com/apk/res/android" android:installLocation="auto">
+<manifest xmlns:local="http://schemas.android.com/apk/res/XamMvvmAndWebServices.Droid" xmlns:android="http://schemas.android.com/apk/res/android" package="XamMvvmAndWebServices.Droid" android:installLocation="auto" android:versionCode="1">
 	<uses-sdk android:minSdkVersion="15" />
 	<application android:label="Xamarin MVVM and Web Services" android:theme="@style/AppTheme" android:icon="@drawable/icon"></application>
 </manifest>
