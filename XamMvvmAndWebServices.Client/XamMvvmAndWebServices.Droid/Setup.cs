@@ -6,6 +6,7 @@ using MvvmCross.Droid.Views;
 using XamMvvmAndWebServices.Interfaces;
 using MvvmCross.Platform;
 using XamMvvmAndWebServices.Droid.Services;
+using HockeyApp.Android;
 
 namespace XamMvvmAndWebServices.Droid
 {
@@ -14,6 +15,7 @@ namespace XamMvvmAndWebServices.Droid
     {
         public Setup(Context applicationContext) : base(applicationContext)
         {
+
         }
 
         protected override IMvxAndroidViewPresenter CreateViewPresenter()

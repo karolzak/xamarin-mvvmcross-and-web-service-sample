@@ -1,6 +1,6 @@
 ﻿{
   "dependencies": {
-    "HockeySDK.Xamarin": "4.1.0",
+    "HockeySDK.Xamarin": "4.1.4",
     "Microsoft.Azure.Mobile.Client": "3.0.3",
     "Microsoft.Bcl": "1.1.10",
     "Microsoft.Bcl.Build": "1.0.21",
