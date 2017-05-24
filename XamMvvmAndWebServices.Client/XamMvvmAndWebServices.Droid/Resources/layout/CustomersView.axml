@@ -21,4 +21,10 @@
         android:textSize="40dp"
         android:text="Go Back"
         local:MvxBind="Click GoBackCommand" />
+    <Mvx.MvxListView
+        local:MvxBind="ItemsSource Customers; SelectedItem SelectedCustomer; ItemClick NavigateToOrdersCommand"
+        android:id="@+id/listview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        local:MvxItemTemplate="@layout/listitem_customer" />
 </LinearLayout>

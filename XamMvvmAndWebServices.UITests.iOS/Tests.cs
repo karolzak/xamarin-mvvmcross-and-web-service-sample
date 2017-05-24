@@ -30,6 +30,7 @@ namespace iOSUITest
         [Test]
         public void AppLaunches()
         {
+            
             app.Screenshot("First screen.");
         }
     }

@@ -216,7 +216,9 @@
       <DependentUpon>OrdersView.cs</DependentUpon>
     </Compile>
     <None Include="app.config" />
-    <None Include="Entitlements.plist" />
+    <None Include="Entitlements.plist">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Info.plist">
       <SubType>Designer</SubType>
     </None>

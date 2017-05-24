@@ -5,16 +5,25 @@
     android:layout_height="wrap_content"
     android:orientation="horizontal"
     android:padding="20dp">
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="0"
-        android:gravity="right"
-        local:MvxBind="Text Name"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
-    <Mvx.MvxImageView
+  <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_weight="1"
+      android:gravity="left"
+      android:textSize="10dp"
+      local:MvxBind="Text ProductName"
+      android:textAppearance="?android:attr/textAppearanceLarge" />
+  <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_weight="1"
+      android:gravity="left"
+      android:textSize="10dp"
+      local:MvxBind="Text Quantity"
+      android:textAppearance="?android:attr/textAppearanceLarge" />
+ <!--<Mvx.MvxImageView
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_weight="10"
-        local:MvxBind="ImageUrl ImageUrl" />
+        local:MvxBind="ImageUrl ImageUrl" />-->
 </LinearLayout>

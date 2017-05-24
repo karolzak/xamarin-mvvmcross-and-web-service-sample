@@ -43,7 +43,7 @@ namespace XamMvvmAndWebServices.UITests.Droid
             app.EnterText(x => x.Id("TbxUsername"), "admin");
             app.Tap(x => x.Id("TbxPassword"));
             app.EnterText(x => x.Id("TbxPassword"), "admin");
-
+            
 
             app.Tap(x => x.Id("BtnLogin"));
             
@@ -56,7 +56,7 @@ namespace XamMvvmAndWebServices.UITests.Droid
             app.WaitForElement(x => x.Text("edit"));
             app.Screenshot("Waited for view with class: Button with text: edit");
         }
-
+        
         
         
         

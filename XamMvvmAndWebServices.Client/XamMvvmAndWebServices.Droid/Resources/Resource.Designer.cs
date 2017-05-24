@@ -2440,11 +2440,11 @@ namespace XamMvvmAndWebServices.Droid
 			// aapt resource value: 0x7f0b0041
 			public const int list_item = 2131427393;
 			
-			// aapt resource value: 0x7f0b0069
-			public const int listview = 2131427433;
+			// aapt resource value: 0x7f0b0066
+			public const int listview = 2131427430;
 			
-			// aapt resource value: 0x7f0b0068
-			public const int main_content = 2131427432;
+			// aapt resource value: 0x7f0b0069
+			public const int main_content = 2131427433;
 			
 			// aapt resource value: 0x7f0b009d
 			public const int media_actions = 2131427485;
@@ -2569,11 +2569,11 @@ namespace XamMvvmAndWebServices.Droid
 			// aapt resource value: 0x7f0b0014
 			public const int showTitle = 2131427348;
 			
-			// aapt resource value: 0x7f0b0067
-			public const int snackbar_action = 2131427431;
+			// aapt resource value: 0x7f0b0068
+			public const int snackbar_action = 2131427432;
 			
-			// aapt resource value: 0x7f0b0066
-			public const int snackbar_text = 2131427430;
+			// aapt resource value: 0x7f0b0067
+			public const int snackbar_text = 2131427431;
 			
 			// aapt resource value: 0x7f0b0007
 			public const int split_action_bar = 2131427335;
