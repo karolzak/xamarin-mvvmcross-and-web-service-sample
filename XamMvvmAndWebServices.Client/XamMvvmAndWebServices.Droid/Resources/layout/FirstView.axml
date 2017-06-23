@@ -5,7 +5,11 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:id="@+id/main_content">
-    <LinearLayout
+  <include
+      android:id="@+id/toolbar"
+      layout="@layout/toolbar"/>
+
+  <!--<LinearLayout
         android:orientation="horizontal"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
@@ -23,11 +27,12 @@
             android:textSize="20dp"
             android:text="edit"
             local:MvxBind="Click EditCommand" />
-    </LinearLayout>
+    </LinearLayout>-->
     <Mvx.MvxListView
         local:MvxBind="ItemsSource Employees; SelectedItem SelectedEmployee; ItemClick NavigateToCustomersCommand"
         android:id="@+id/listview"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
+       
         local:MvxItemTemplate="@layout/listitem_employee" />
 </LinearLayout>

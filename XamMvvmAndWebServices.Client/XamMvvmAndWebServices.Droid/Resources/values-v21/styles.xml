@@ -3,6 +3,11 @@
         Base application theme for API 21+. This theme completely replaces
         AppTheme from BOTH res/values/styles.xml on API 21+ devices.
     -->
+  <style name="ToolbarTheme" parent="@android:style/Theme.Material.Light.DarkActionBar">
+    <item name="android:windowNoTitle">true</item>
+    <item name="android:windowActionBar">false</item>
+    <item name="android:colorPrimary">#5A8622</item>
+  </style>
     <style name="AppTheme" parent="AppTheme.Base">
 
         <item name="android:statusBarColor">@android:color/transparent</item>

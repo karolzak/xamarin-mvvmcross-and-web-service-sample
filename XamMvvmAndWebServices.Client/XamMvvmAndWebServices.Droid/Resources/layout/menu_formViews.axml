@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/menu_save"
+        android:icon="@drawable/ic_action_content_save"
+        android:showAsAction="ifRoom"
+        android:title="Save" />
+    <item
+        android:id="@+id/menu_discard"
+        android:showAsAction="ifRoom"
+        android:title="Discard" />
+<!--android:icon="@drawable/ic_action_content_discard"-->
+</menu>

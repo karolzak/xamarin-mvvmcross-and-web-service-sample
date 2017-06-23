@@ -4,23 +4,10 @@
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent">
-    <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:textSize="40dp"
-        local:MvxBind="Text PageTitle" />
-    <Button
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:textSize="40dp"
-        android:text="Go to OrdersView"
-        local:MvxBind="Click NavigateToOrdersCommand" />
-    <Button
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:textSize="40dp"
-        android:text="Go Back"
-        local:MvxBind="Click GoBackCommand" />
+  <include
+      android:id="@+id/toolbar"
+      layout="@layout/toolbar"/>
+    
     <Mvx.MvxListView
         local:MvxBind="ItemsSource Customers; SelectedItem SelectedCustomer; ItemClick NavigateToOrdersCommand"
         android:id="@+id/listview"

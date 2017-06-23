@@ -5,39 +5,39 @@
     android:layout_height="wrap_content"
     android:orientation="horizontal"
     android:padding="20dp">
-  <TextView
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_weight="1"
-      android:gravity="left"
-      android:textSize="10dp"
-      local:MvxBind="Text CustomerName"
-      android:textAppearance="?android:attr/textAppearanceLarge" />
-  <TextView
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_weight="1"
-      android:gravity="left"
-      android:textSize="10dp"
-      local:MvxBind="Text City"
-      android:textAppearance="?android:attr/textAppearanceLarge" />
-  <TextView
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_weight="1"
-      android:gravity="left"
-      android:textSize="10dp"
-      local:MvxBind="Text Address"
-      android:textAppearance="?android:attr/textAppearanceLarge" />
-  <TextView
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_weight="1"
-      android:gravity="left"
-      android:textSize="10dp"
-      local:MvxBind="Text Customers.Count"
-      android:textAppearance="?android:attr/textAppearanceLarge" />
-  <!--<Mvx.MvxImageView
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="left"
+        android:textSize="10dp"
+        local:MvxBind="Text CustomerName"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="left"
+        android:textSize="10dp"
+        local:MvxBind="Text City"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="left"
+        android:textSize="10dp"
+        local:MvxBind="Text Address"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="left"
+        android:textSize="10dp"
+        local:MvxBind="Text Customers.Count"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+<!--<Mvx.MvxImageView
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_weight="10"

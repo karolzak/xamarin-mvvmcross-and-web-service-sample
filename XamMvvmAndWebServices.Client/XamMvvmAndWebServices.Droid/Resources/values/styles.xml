@@ -1,6 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <resources>
-
+  <style name="ToolbarTheme" parent="@android:style/Theme.Material.Light.DarkActionBar">
+    <item name="android:windowNoTitle">true</item>
+    <item name="android:windowActionBar">false</item>
+    <item name="android:colorPrimary">#5A8622</item>
+  </style>
     <!-- Application theme -->
     <style name="AppTheme" parent="AppTheme.Base">
     </style>
